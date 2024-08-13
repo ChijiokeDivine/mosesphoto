@@ -1,0 +1,256 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <!-- ===== Meta ===== -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Favicon ===== -->
+    <link rel="icon" type="image/x-icon" href="assets/imgs/favicon.png">
+
+    <!-- ===== Title ===== -->
+    <title>Bronx - Personal Portfolio HTML5 Template</title>
+
+    <!-- ===== LineAwesome ===== -->
+    <link rel="stylesheet" href="{% static 'assets/css/line-awesome.css' %}">
+
+         <!-- ===== Swiper8 ===== -->
+    <link rel="stylesheet" href="{% static 'assets/css/swiper8.min.css' %}">
+
+    <!-- ===== Fonts ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&amp;family=Inter+Tight:ital,wght@0,100..900;1,100..900&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- ===== Stylesheet ===== -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+</head>
+<style>
+    @media (max-width: 809px) {
+        .popup-menu ul li {
+            overflow: hidden;
+            padding-bottom: 20px;
+        }
+        .popup-menu-close-btn{
+            margin-top: 35px;
+        }
+        #progress-bar1 {
+            height: 3px;
+          }
+    }
+    #progress-bar-container1 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background-color: #000;
+        z-index: 999999;
+      }
+      
+      #progress-bar1 {
+        background-color: #FFF;
+        height: 1.5px;
+        transition: width 0.5s ease-in-out;
+      }
+
+      
+</style>
+
+<body>
+    <div id="progress-bar-container1">
+        <div id="progress-bar1" style="width: 0%;"></div>
+      </div>
+
+    <div class="custom-cursor"></div>
+
+
+
+    <!-- ===== Loader Start ===== -->
+    <div class="preloader-wrap">
+        <div class="loader">
+            <img src="{% static 'assets/imgs/ezgif.com-optimize.gif' %}" alt="loader">
+            <span style="color: #fff;"></span>
+        </div>
+        
+    </div> 
+    <!-- ===== Loader End ===== -->
+
+
+    <!-- ===== Main Start ===== -->
+    <main class="bronx-main home-page">
+
+        <!-- ===== Popup Menu Start ===== -->
+        <div class="popup-menu-wrap">
+            <div class="popup-menu-header">
+                <div class="local-temperature">
+                    {% comment %} <a href="index.html"><a href="index.html"><span>Local/</span><span id="coordinates"></span></a></a> {% endcomment %}
+                    <a href="/"><a href="/"><span>Local/ </span><span id="realtime">00:00</span></a></a>
+
+                </div>
+
+                <div class="popup-menu-close-btn" >
+                    <div class="icon">
+                        <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" color="rgba(214, 214, 215, 0.7)">
+                            <path d="M6 12h6m6 0h-6m0 0V6m0 6v6" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="right text-right">
+                    <a href="{% url "contact" %}"  class="theme-btn">Schedule a call</a>
+                </div>
+            </div>
+            <div class="popup-menu">
+                <nav>
+                    <ul>
+                        <li class="active">
+                            <a href="/" >
+                                <span class="count">(1)</span>
+                                <span>Home</span>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url "categories" %}" >
+                                <span class="count">(2)</span>
+                                <span>Categories</span>
+                                <span>Categories</span>
+                            </a>
+                        </li>
+                     
+                        <li>
+                            <a href="{% url "pricing" %}" >
+                                <span class="count">(3)</span>
+                                <span>Pricing</span>
+                                <span>Pricing</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url "contact" %}" >
+                                <span class="count">(4)</span>
+                                <span>Contact</span>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url "about" %}" >
+                                <span class="count">(5)</span>
+                                <span>About</span>
+                                <span>About</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="popup-menu-footer">
+                <div class="copyright">
+                    <p>&copy;2024 ALL RIGHTS RESERVED</p>
+
+                    <ul class="social-links">
+                        <li>
+                            <a href="https://instagram.com/" target="_blank">Instagram <svg xmlns="http://www.w3.org/2000/svg"
+                                    focusable="false" viewBox="0 0 24 24" color="rgb(29, 29, 31)">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
+                                    </path>
+                                </svg></a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        {% block content %}
+        
+        {% endblock content %}
+        
+
+        <!-- ===== Experience Popup Start ===== -->
+        <div class="experience-popup">
+            <div class="experience-popup-content-wrap">
+                
+                <div class="close-experience-popup-btn">
+                    <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" color="rgba(214, 214, 215, 0.7)">
+                        <path d="M6 12h6m6 0h-6m0 0V6m0 6v6" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+
+                <div class="experience-popup-content">
+                    <div class="experience-popup-header">
+                        <span class="price">STARTS AT $3,999</span>
+                        <h3>#### PHOTOGRAHY</h3>
+                    </div>
+                    <p>### PHOTOGRAHY is one my high end service<br> that i give to my clients.</p>
+                    <div class="experience-popup-features">
+                        <h4>KEY FEATURES</h4>
+                        <div class="experience-popup-feature-lists">
+                            <div class="experience-popup-feature">
+                                <span>(1)</span> Good camera
+                            </div>
+                            <div class="experience-popup-feature">
+                                <span>(2)</span> Good camera
+                            </div>
+                            <div class="experience-popup-feature">
+                                <span>(3)</span> Good camera
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-popup-btns">
+                        <a href="{% url "contact" %}" class="theme-btn2">Get started</a>
+                        <a href="mailto:Moschimereze@gmail.com" class="theme-btn3">E-Mail</a>
+                    </div>
+                </div>
+                <div class="experience-popup-img">
+                    <img src="{% static 'assets/imgs/exp-popup.jpg' %}" alt="experience">
+                </div>
+            </div>
+        </div>
+        <!-- ===== Experience Popup End ===== -->
+
+    </main>
+    <!-- ===== Main End ===== -->
+
+
+
+
+    <!-- ===== Scripts ===== -->
+    <script src="{% static 'assets/js/jquery.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/gsap.min.js' %}"></script>
+    <script src="{% static 'assets/js/htmx.min.js' %}"></script>
+    <script src="{% static 'assets/js/ScrollTrigger.min.js' %}"></script>
+    <script src="{% static 'assets/js/ScrollToPlugin.min.js' %}"></script>
+
+    <script src="{% static 'assets/js/ScrollSmoother.min.js' %}"></script>
+    <script src="{% static 'assets/js/SplitText.min.js' %}"></script>
+    <script src="{% static 'assets/js/jarallax.js' %}"></script>
+    <script src="{% static 'assets/js/jarallax-element.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <script src="{% static 'assets/js/themescroll.js' %}"></script>
+    <script src="{% static 'assets/js/google-translate.js' %}"></script>
+    <script src="{% static 'assets/js/swiper8-bundle.min.js' %}"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          effect: "cards",
+          grabCursor: true,
+        });
+    </script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,678 @@
+{% extends "partials/base.html" %}
+{% load static %}
+{% block content %}
+        <!-- ===== Popup Menu End ===== -->
+{% comment %} <style>
+    @media (max-width: 809px) {
+        .hero-sec {
+            height: 100vh;
+            gap: 0px;
+        }
+    }
+</style> {% endcomment %}
+
+        <!-- ===== Smooth Scroll Start ===== -->
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+
+                
+                <!-- ===== Hero Section Start ===== -->
+                <section class="hero-sec" id="hero-sec">
+
+                    <!-- ===== Header Start ===== -->
+                    <header class="header-wrap scroll-animation" data-animation="slide_up">
+                        <div class="custom-row">
+
+                            <!-- ===== Local Time ===== -->
+                            <div class="header-local-time-box">
+                                <a href="/"><span>Local/</span></a>
+                                <span id="realtime">00:00</span>
+                            
+                            </div>
+
+                            <!-- ===== Humberg Menu ===== -->
+                            <div class="header-middle">
+                                <div class="humberg-menu">
+                                    <a href="{% url "contact" %}">
+                                        <?xml version="1.0" encoding="UTF-8"?>
+                                        <svg width="30px" height="30px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000">
+                                            <path d="M9 9L13.5 12L18 9" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M3 13.5H5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M1 10.5H5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M5 7.5V7C5 5.89543 5.89543 5 7 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H7C5.89543 19 5 18.1046 5 17V16.5" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path>
+                                        </svg>
+                                    </a>
+
+                                </div>
+                            </div>
+
+                            <!-- ===== Header Contact Button ===== -->
+                            <div class="header-right">
+                                <a href="#" class="theme-btn">Navigate </a>
+                            </div>
+                           
+                        </div>
+                        
+                    </header>
+                
+
+                    <div class="hero-sec-content " id="hero-sec-content">
+                        <img src="{% static "assets/imgs/photo_2024-08-10_13-09-25.jpg" %}" alt="MOSES" width="200" height="250">
+                        <span class="available-status">
+                            Hello, I'm Moses Chimereze<span><picture>
+                                <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/512.webp" type="image/webp">
+                                <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/512.gif" alt="👋" width="32" height="32">
+                              </picture></span>
+                              
+                        </span>
+
+                        <h1 id="movingElement">
+                            <span><span class="timeline-anim scroll-animation " data-animation="slide_down" style=" word-spacing: 10px;">MOSES CHIMEREZE</span></span>
+                        </h1>
+                        {% comment %} <div>
+                            <h4 >I'M MOSES, AN INDEPENDENT PHOTOGRAPHER BASED IN GERMANY. <br>PHOTOGRAPHY IS MY PASSION, AND I AM DEDICATED TO CAPTURING<br> THE BEAUTY OF LIFE'S MOST PRECIOUS MOMENTS. </h4>
+                        </div> {% endcomment %}
+                       
+                         
+                    </div>
+                    <!-- ===== Hero Section Content End ===== -->
+
+
+                    <!-- ===== Hero Footer Start ===== -->
+                    <div class="hero-footer-wrap scroll-from-bottom pt-3" id="hero-footer-wrap">
+                        <p>BASED IN GERMANY</p>
+                        <div class="hero-footer-right">
+                            <a href="#" class="link-with-line">INDEPENDENT PHOTOGRAPHER</a>
+                            {% comment %} <p>INDEPENDENT PHOTOGRAPHER</p> {% endcomment %}
+                        </div>
+                    </div>
+                    <!-- ===== Hero Footer End ===== -->
+
+                </section>
+                <!-- ===== Hero Section End ===== -->
+
+                <!-- ===== Full Image Start ===== -->
+                <div class="full-image-sec pt-30" >
+                    <div class="full-image-box">
+                        <img class="scaleDown" src="{% static "assets/imgs/rsz_11photo_2024-08-10_13-09-04-transformed_1.jpg" %}" alt="about">
+                        {% comment %} <img class="scaleDown" src="{% static 'assets/imgs/hero.jpg' %}" alt="about"> {% endcomment %}
+                    </div>
+                </div>
+                <!-- ===== Full Image End ===== -->
+
+                <!-- ===== Video Start ===== -->
+                {% comment %} <div class="video-sec">
+                    <video src="{% static 'assets/imgs/dark-mode/video-2.mp4' %}" loop="true" muted="true" autoplay playsinline=""></video>
+                </div> {% endcomment %}
+                <!-- ===== Video End ===== -->
+
+                <section class="experience-sec " >
+                    <div class="section-header disp-grid">
+                        <div class="left">
+                            <h3>
+                                <span><span class="timeline-anim scroll-animation" data-animation="slide_down">Emotions in</span></span>
+                                <span><span class="timeline-anim scroll-animation pb-5" data-animation="slide_down">every shot</span></span>
+                            </h3>
+                        </div>
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide"> <img class="scaleDown"src="{% static "assets/imgs/photo_2024-08-10_13-09-00.jpg" %}" alt="about"></div>
+                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/photo_2024-08-10_13-09-04.jpg" %}" alt="about"></div>
+                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/photo_2024-08-10_13-09-09.jpg" %}" alt="about"></div>
+                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/photo_2024-08-10_13-09-13.jpg" %}" alt="about"></div>
+                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/photo_2024-08-10_13-09-17.jpg" %}" alt="about"></div>
+                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/photo_2024-08-10_13-09-21.jpg" %}" alt="about"></div>
+                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/photo_2024-08-10_13-09-25.jpg" %}" alt="about"></div>
+                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/photo_2024-08-10_13-09-29.jpg" %}" alt="about"></div>
+                            </div>
+                          </div>
+                    </div>
+
+                
+                </section>
+                <!-- ===== Featured Work Start ===== -->
+                <section class="featured-work-sec">
+                    <div class="section-header">
+                        <div class="left">
+                            <h3>
+                                <span><span class="timeline-anim scroll-animation" data-animation="slide_down">FEATURED</span></span>
+                                <span><span class="timeline-anim scroll-animation" data-animation="slide_down">WORK</span></span>
+                            </h3>
+                        </div>
+                        <div class="right">
+                            <p>My creative spirit comes alive in the digital realm. With nimble fingers flying across
+                                the keyboard, I craft clear experiences out of nothing but ones and zeroes.</p>
+                        </div>
+                    </div>
+
+                    <div class="featured-work-lists">
+                        {% for c in categories %}
+                        <!-- Featured Cart -->
+                        <div class="featured-card">
+                            <a class="link-overlay" href="work-detail-1.html"></a>
+                            <div class="img-box">
+                                <img src="{% static 'assets/imgs/work-1.jpg' %}" alt="Work">
+                            </div>
+                            <div class="content">
+                                <div class="left">
+                                    <p class="title">{{c.name}}</p>
+                                    <p class="subtitle">{{c.name|truncatewords:"1"}}</p>
+                                </div>
+                                <div class="right">
+                                    <span class="date">2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </section>
+                <!-- ===== Featured Work End ===== -->
+
+
+                <!-- ===== About Start ===== -->
+                <section class="about-sec">
+                    <div class="section-header2">
+                        <h3 class="title sticky-statement2 scroll-animation" data-animation="slide_and_scale">
+                            <span class="transform-anim"><span class="timeline-anim scroll-animation" data-animation="slide_down">MORE ABOUT</span></span>
+                            <span class="transform-anim"><span class="timeline-anim scroll-animation" data-animation="slide_down">MOSES ©</span></span>
+                        </h3>
+                    </div>
+
+                    <div class="about-bottom-content-wrap">
+                        <div class="img-box">
+                            <div class="img-box-inner">
+                                {% comment %} <img data-jarallax-element="-20 0" src="{% static 'assets/imgs/portfolio1-scaled.jpg' %}" alt="About"> {% endcomment %}
+                                <img data-jarallax-element="-20 0" src="{% static 'assets/imgs/photo_2024-08-10_13-09-29.jpg' %}" alt="about">
+                            </div>
+                        </div>
+                        <div class="about-bottom-content">
+                            
+                            <p>My journey began with a simple camera and a love for storytelling, 
+                                which has grown into a diverse portfolio spanning portrait, landscape, event, and street photography.
+                                 I believe every picture tells a story, and my goal is to make each photograph <i>"a testament to the beauty and diversity of the human experience."</i>
+                                 My work is characterized by vibrant colors<picture>
+                                    <source style="display: inline;" srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f308/512.webp" type="image/webp">
+                                    <img style="display: inline;" src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f308/512.gif" alt="🌈" width="28" height="28">
+                                  </picture>, striking compositions, and the ability to evoke emotions in every shot.</p>
+                            <a href="{% url "about" %}"  class="theme-btn">Learn More</a>
+                        </div>
+                    </div>
+                </section>
+                <!-- ===== About End ===== -->
+
+                <!-- ===== Partner Start ===== -->
+                <div class="partner-sec">
+                    <ul>
+                        <li>
+                            <a  class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="{% static 'assets/imgs/Blue Outfit-10.webp' %}" alt="Partner">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="{% static 'assets/imgs/partner-2.svg' %}" alt="Partner">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="{% static 'assets/imgs/partner-3.svg' %}" alt="Partner">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="{% static 'assets/imgs/partner-4.svg' %}" alt="Partner">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="{% static 'assets/imgs/partner-5.svg' %}" alt="Partner">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="{% static 'assets/imgs/partner-6.svg' %}" alt="Partner">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="{% static 'assets/imgs/partner-7.svg' %}" alt="Partner">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="{% static 'assets/imgs/partner-1.svg' %}" alt="Partner">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="{% static 'assets/imgs/partner-2.svg' %}" alt="Partner">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="{% static 'assets/imgs/partner-3.svg' %}" alt="Partner">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="{% static 'assets/imgs/partner-4.svg' %}" alt="Partner">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="{% static 'assets/imgs/partner-5.svg' %}" alt="Partner">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="{% static 'assets/imgs/partner-6.svg' %}" alt="Partner">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="{% static 'assets/imgs/partner-7.svg' %}" alt="Partner">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="{% static 'assets/imgs/partner-1.svg' %}" alt="Partner">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="{% static 'assets/imgs/partner-1.svg' %}" alt="Partner">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="{% static 'assets/imgs/partner-1.svg' %}" alt="Partner">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="{% static 'assets/imgs/partner-1.svg' %}" alt="Partner">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="{% static 'assets/imgs/partner-1.svg' %}" alt="Partner">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="{% static 'assets/imgs/partner-1.svg' %}" alt="Partner">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="{% static 'assets/imgs/partner-1.svg' %}" alt="Partner">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ===== Partner End ===== -->
+
+
+                <!-- ===== Experience Start ===== -->
+                <section class="experience-sec">
+                    <div class="section-header">
+                        <div class="left">
+                            <h3>
+                                <span><span class="timeline-anim scroll-animation" data-animation="slide_down">MY</span></span>
+                                <span><span class="timeline-anim scroll-animation" data-animation="slide_down">SERVICES</span></span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- ==== Experience lists ==== -->
+                    <div class="experience-list-wrap">
+                        <div class="experience-lists">
+                            <div class="experience-box">
+                                <div class="experience-button-box">
+                                    <a href="#" class="experience-button">
+                                        <svg width="18px" height="18px" stroke-width="1.5" viewBox="0 0 24 24"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg"
+                                            color="rgba(214, 214, 215, 0.7)">
+                                            <path d="M6 12h6m6 0h-6m0 0V6m0 6v6" stroke="currentColor"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <span>(1)</span>
+                                    <span>PORTRAIT PHOTOGRAHY</span>
+                                </h4>
+                                <p>Capturing the essence of your personality in timeless images.</p>
+                            </div>
+                            <div class="experience-box">
+                                <div class="experience-button-box">
+                                    <a href="#" class="experience-button">
+                                        <svg width="18px" height="18px" stroke-width="1.5" viewBox="0 0 24 24"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg"
+                                            color="rgba(214, 214, 215, 0.7)">
+                                            <path d="M6 12h6m6 0h-6m0 0V6m0 6v6" stroke="currentColor"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <span>(2)</span>
+                                    <span>EVENT PHOTOGRAHY</span>
+                                </h4>
+                                <p>Documenting your special moments with a creative eye.</p>
+                            </div>
+                            <div class="experience-box">
+                                <div class="experience-button-box">
+                                    <a href="#" class="experience-button">
+                                        <svg width="18px" height="18px" stroke-width="1.5" viewBox="0 0 24 24"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg"
+                                            color="rgba(214, 214, 215, 0.7)">
+                                            <path d="M6 12h6m6 0h-6m0 0V6m0 6v6" stroke="currentColor"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <span>(3)</span>
+                                    <span>LANDSCAPE PHOTOGRAHY</span>
+                                </h4>
+                                <p>Showcasing the beauty of nature through stunning visuals.</p>
+                            </div>
+                        </div>
+
+                        <div class="experience-lists2">
+                            <div class="experience-box">
+                                <div class="experience-button-box">
+                                    <a href="#" class="experience-button">
+                                        <svg width="18px" height="18px" stroke-width="1.5" viewBox="0 0 24 24"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg"
+                                            color="rgba(214, 214, 215, 0.7)">
+                                            <path d="M6 12h6m6 0h-6m0 0V6m0 6v6" stroke="currentColor"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <span>(4)</span>
+                                    <span>STREET PHOTOGRAHY </span>
+                                </h4>
+                                <p>Telling everyday stories through candid and dynamic images.</p>
+                            </div>
+                            <div class="experience-box">
+                                <div class="experience-button-box">
+                                    <a href="#" class="experience-button">
+                                        <svg width="18px" height="18px" stroke-width="1.5" viewBox="0 0 24 24"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg"
+                                            color="rgba(214, 214, 215, 0.7)">
+                                            <path d="M6 12h6m6 0h-6m0 0V6m0 6v6" stroke="currentColor"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <span>(5)</span>
+                                    <span>COMMERCIAL PHOTOGRAHY</span>
+                                </h4>
+                                <p>Professional imagery that elevates your brand's presence.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ===== Experience End ===== -->
+
+
+                <!-- ===== Motivation Start ===== -->
+                <section class="motivation-sec">
+                    <div class="custom-row">
+                        <div class="left">
+                            <h3>MOTIVATION</h3>
+                        </div>
+                        <div class="right">
+                           
+
+                            <div class="motivation-content">
+                                <p> As a photographer based in Germany, my passion is capturing the world <span ><picture >
+                                    <source style="display: inline;" srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f30d/512.webp" type="image/webp">
+                                    <img style="display: inline;" src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f30d/512.gif" alt="🌍" width="32" height="32">
+                                  </picture></span> through a lens, 
+                                    one moment at a time. <i>"Your sites can tell a story"</i>, Photography, for me, is about more than just taking pictures—it's about telling stories,
+                                        evoking emotions, and preserving memories that last a lifetime. Whether exploring Berlin, capturing Bavaria, or documenting daily life, my goal is to create images that resonate and connect.</p>
+                                <p>Every photo captures fleeting beauty. My mission is to <i>"bring these moments to life"</i> and share the world’s stories. Explore my work and see the wonder I see!</p>
+                                <img src="{% static 'assets/imgs/signature.png' %}" alt="Signature">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ===== Motivation End ===== -->
+
+                <!-- ===== Full Image Start ===== -->
+                <div class="full-image-sec">
+                    <div class="full-image-box">
+                        <img class="scaleDown" src="{% static 'assets/imgs/work-4.jpeg' %}" alt="about">
+                    </div>
+                </div>
+                <!-- ===== Full Image End ===== -->
+
+
+
+{% comment %} 
+                <!-- ===== Full Image Start ===== -->
+                <div class="full-image-sec">
+                    <div class="full-image-box">
+                        <img class="scaleDown" src="{% static 'assets/imgs/work-detail-2.png' %}" alt="about">
+                    </div>
+                </div>
+                <!-- ===== Full Image End ===== --> {% endcomment %}
+
+
+                <!-- ===== FAQ Start ===== -->
+                <section class="faq-sec">
+                    <div class="section-header3">
+                        <h3 class="title ">
+                            <span><span class="timeline-anim scroll-animation" data-animation="slide_down">FREQUENTLY</span></span>
+                            <span><span class="timeline-anim scroll-animation" data-animation="slide_down">ASKED QUESTIONS</span></span>
+                        </h3>
+                    </div>
+
+                    <div class="accordion faq-wrap" id="accordionExample" >
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    WHAT IS YOUR PHOTOGRAPHY STYLE? <i class="las la-plus"></i>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>My style is a blend of modern and classic, focusing on natural light and authentic moments. I aim to capture the true essence of my subjects, whether it’s a candid portrait or a stunning landscape.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    WHAT ARE YOUR RATES AND PACKAGES? <i class="las la-plus"></i>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>My rates vary depending on the type of shoot and the specifics of your project. I offer several packages that cater to different needs, from basic sessions to full-day shoots. Please contact me for detailed pricing and to discuss a package tailored to your requirements.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    CAN YOU PROVIDE EXAMPLES OF YOUR PREVIOUS WORK? <i class="las la-plus"></i>
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Absolutely! You can view my portfolio on this website, where I’ve showcased a variety of my work, including portraits, events, and commercial projects. I’m also happy to provide specific examples based on your needs.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    HOW DO YOU HANDLE POST-PROCESSING AND EDITING? <i class="las la-plus"></i>
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>I carefully edit each image to enhance its natural beauty while maintaining a realistic look. My editing process includes color correction, retouching, and ensuring every detail is perfect. I also offer additional editing services upon request.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    DO YOU OFFER CUSTOMIZABLE PACKAGES? <i class="las la-plus"></i>
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Yes, I understand that every project is unique, so I’m happy to customize a package that fits your specific needs and budget. We can discuss your vision and create a package that covers all your requirements.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    WHAT IS YOUR AVAILABILITY?<i class="las la-plus"></i>
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>I’m flexible and will do my best to accommodate your preferred date and time. It’s always a good idea to book as early as possible to ensure availability, especially during peak seasons.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ===== FAQ End ===== -->
+
+
+                <!-- ===== CTA Start ===== -->
+                <section class="cta-sec">
+                    <div class="section-header2">
+                        <h3 class="title">
+                            <span>LET'S WORK</span>
+                            <span>TOGETHER</span>
+                        </h3>
+                        <a href="{% url "contact" %}" class="theme-btn">CONTACT</a>
+                    </div>
+
+                    <div class="cta-content about-bottom-content-wrap">
+                        <div class="img-box">
+                            <div class="img-box-inner">
+                                <img data-jarallax-element="-20 0" src="{% static 'assets/imgs/photo_2024-08-10_13-09-00.jpg' %}" alt="About">
+                            </div>
+                        </div>
+                        <div class="about-bottom-content">
+                            <div>
+                                <p>I'M AN INDEPENDENT PHOTOGRAPHER BASED IN GERMANY. <br>PHOTOGRAPHY IS MY PASSION, AND I AM DEDICATED TO CAPTURING<br> THE BEAUTY OF LIFE'S MOST PRECIOUS MOMENTS.</p>
+                            </div>
+                            <ul class="social-links">
+                                <li>
+                                    <a href="https://instagram.com/" target="_blank">Instagram <svg xmlns="http://www.w3.org/2000/svg"
+                                            focusable="false" viewBox="0 0 24 24" color="rgb(29, 29, 31)">
+                                            <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
+                                            </path>
+                                        </svg></a>
+                                </li>
+                                <li>
+                                    <a href="https://vogue.com/" target="_blank">Vogue <svg xmlns="http://www.w3.org/2000/svg"
+                                            focusable="false" viewBox="0 0 24 24" color="rgb(29, 29, 31)">
+                                            <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
+                                            </path>
+                                        </svg></a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/" target="_blank">Twitter <svg xmlns="http://www.w3.org/2000/svg"
+                                            focusable="false" viewBox="0 0 24 24" color="rgb(29, 29, 31)">
+                                            <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
+                                            </path>
+                                        </svg></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <!-- ===== CTA End ===== -->
+
+
+                <!-- ===== Footer Start ===== -->
+                <footer class="footer-area">
+                    <div class="footer-big-text">
+                        <span class="timeline-anim scroll-animation" data-animation="slide_down">MOSES CHIMEREZE</span>
+                    </div>
+
+                    <div class="copyright">
+                        <p>&copy;2024 MOSES.CAM</p>
+                        <div class="right">
+                            <a href="#" id="back-to-top">GO BACK TO TOP</a>
+                        </div>
+                    </div>
+                </footer>
+                <!-- ===== Footer End ===== -->
+
+            </div>
+        </div>
+        
+        <!-- ===== Smooth Scroll End ===== -->
+{% endblock content %}

@@ -1,0 +1,140 @@
+{% extends "partials/base.html" %}
+{% load static %}
+{% block content %}
+        <!-- ===== Popup Menu End ===== -->
+
+        <!-- ===== Smooth Scroll Start ===== -->
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+
+                <!-- ===== Hero Section Start ===== -->
+                <section class="hero-sec hero-sec3">
+
+                    <!-- ===== Header Start ===== -->
+                    <header class="header-wrap scroll-animation" data-animation="slide_up">
+                        <div class="custom-row">
+
+                            <!-- ===== Local Time ===== -->
+                            <div class="header-local-time-box">
+                                <a href="/"><span>Local/</span></a>
+                                <span id="realtime">00:00</span>
+                            </div>
+
+                            <div class="header-middle">
+                                <div class="humberg-menu">
+                                    <a href="{% url "contact" %}">
+                                        <?xml version="1.0" encoding="UTF-8"?>
+                                        <svg width="30px" height="30px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000">
+                                            <path d="M9 9L13.5 12L18 9" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M3 13.5H5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M1 10.5H5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M5 7.5V7C5 5.89543 5.89543 5 7 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H7C5.89543 19 5 18.1046 5 17V16.5" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path>
+                                        </svg>
+                                    </a>
+
+                                </div>
+                            </div>
+
+                            <!-- ===== Header Contact Button ===== -->
+                            <div class="header-right">
+                                <a href="#" class="theme-btn">navigate</a>
+                            </div>
+
+                        </div>
+                    </header>
+                    <!-- ===== Header End ===== -->
+
+                </section>
+                <!-- ===== Hero Section End ===== -->
+
+
+                <!-- ===== Contact Start ===== -->
+                <section class="contact-sec">
+                    <div class="contact-form-wrap">
+                        <div class="contact-header">
+                            <h2>Get in Touch</h2>
+                            <p>I'm excited to connect and explore new creative projects. Let's work together to capture stunning moments. Reach out anytime!</p>
+                        </div>
+                        <div class="contact-form">
+                            <h4>FILL THIS FORM OUT</h4>
+                            <form id="ajax-form" action="" method="POST">
+                                <input type="hidden" name="access_key" value="0ea6f02e-35e1-4bc8-801a-f700e7c5a95c">
+                                <input type="checkbox" name="botcheck" id="botcheck" style="display: none;">
+
+                                <div class="input-group">
+                                    <input type="text" name="name" id="name" placeholder="Name">
+                                </div>
+                                <div class="input-group">
+                                    <input type="email" name="email" id="email" placeholder="E-mail">
+                                </div>
+                                <div class="input-group">
+                                    <textarea name="message" id="message" placeholder="Message"></textarea>
+                                </div>
+                                <div class="input-group mb-0">
+                                    <button class="theme-btn2">Send Email</button>
+                                </div>
+                                <p id="result"></p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="contact-img">
+                        <img data-jarallax-element="-20 0" src="{% static 'assets/imgs/Blue Outfit-5.webp' %}" alt="about">
+                    </div>
+                </section>
+                <!-- ===== Contact End ===== -->
+
+
+                <!-- ===== Contact Informations Start ===== -->
+<div class="contact-infos-wrap">
+    <div class="contact-infos">
+        <div class="contact-info-box">
+            <h4>SOCIAL</h4>
+            <ul>
+                <li><a href="https://instagram.com/" target="_blank">Instagram</a></li>
+                <li><a href="https://vogue.com/" target="_blank">Vogue</a></li>
+                <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+            </ul>
+        </div>
+        <div class="contact-info-box">
+            <h4>CURRENT LOCATION</h4>
+            <ul>
+                <li>BERLIN, GERMANY</li>
+            
+            </ul>
+        </div>
+        
+        <div class="contact-info-box">
+            <h4>EMAIL</h4>
+            <ul>
+                <li><a href="mailto:Moschimereze@gmail.com">Moschimereze@gmail.com</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- ===== Contact Informations End ===== -->
+
+
+
+
+
+                <!-- ===== Footer Start ===== -->
+                <footer class="footer-area">
+                    <div class="footer-big-text">
+                        <span class="timeline-anim scroll-animation" data-animation="slide_down">MOSES CHIMEREZE</span>
+                    </div>
+
+                    <div class="copyright">
+                        <p>&copy;2024 MOSES.CAM</p>
+                        <div class="right">
+                            <a href="#" id="back-to-top">GO BACK TO TOP</a>
+                        </div>
+                    </div>
+                </footer>
+                <!-- ===== Footer End ===== -->
+
+
+            </div>
+        </div>
+        <!-- ===== Smooth Scroll End ===== -->
+
+{% endblock content %}

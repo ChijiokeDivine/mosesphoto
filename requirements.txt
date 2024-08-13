@@ -1,0 +1,13 @@
+Django>=3.2.23
+gunicorn==21.2.0
+pip==24.0
+whitenoise==6.2.0
+psycopg2==2.9.7
+Pillow==9.4.0
+pytz==2022.7
+django-pipeline== 2.1.0
+django-ckeditor==6.7.0
+python-decouple==3.8
+resend==0.6.0
+cloudinary==1.39.0
+requests==2.31.0

@@ -1,0 +1,259 @@
+{% extends "partials/base.html" %}
+{% load static %}
+{% block content %}
+        <!-- ===== Popup Menu End ===== -->
+
+        <!-- ===== Smooth Scroll Start ===== -->
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+
+                <!-- ===== Hero Section Start ===== -->
+                <section class="hero-sec hero-sec2">
+
+                    <!-- ===== Header Start ===== -->
+                    <header class="header-wrap scroll-animation" data-animation="slide_up">
+                        <div class="custom-row">
+
+                            <!-- ===== Local Time ===== -->
+                            <div class="header-local-time-box">
+                                <a href="/"><span>Local/</span></a>
+                                <span id="realtime">00:00</span>
+                            </div>
+
+                            <div class="header-middle">
+                                <div class="humberg-menu">
+                                    <a href="{% url "contact" %}" >
+                                        <?xml version="1.0" encoding="UTF-8"?>
+                                        <svg width="30px" height="30px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000">
+                                            <path d="M9 9L13.5 12L18 9" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M3 13.5H5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M1 10.5H5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M5 7.5V7C5 5.89543 5.89543 5 7 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H7C5.89543 19 5 18.1046 5 17V16.5" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path>
+                                        </svg>
+                                    </a>
+
+                                </div>
+                            </div>
+
+                            <!-- ===== Header Contact Button ===== -->
+                            <div class="header-right">
+                                <a href="#" class="theme-btn">navigate</a>
+                            </div>
+
+                        </div>
+                    </header>
+                    <!-- ===== Header End ===== -->
+
+
+                    <!-- ===== Hero Section Content Start ===== -->
+                    <div class="hero-sec-content">
+                        <span class="available-status">
+                            PRICING
+                        </span>
+
+                        <h1>
+                            <span><span class="timeline-anim scroll-animation"
+                                    data-animation="slide_down">MEMBERSHIP</span></span>
+                            <span><span class="timeline-anim scroll-animation"
+                                    data-animation="slide_down">PLANS</span></span>
+                        </h1>
+                    </div>
+                    <!-- ===== Hero Section Content End ===== -->
+
+                </section>
+                <!-- ===== Hero Section End ===== -->
+
+
+                <!-- ===== Pricing Start ===== -->
+                <section class="pricing-sec">
+                    <ul class="nav nav-pills pricing-nav" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-per-project-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-per-project" type="button" role="tab" aria-controls="pills-per-project"
+                                aria-selected="true">Per Project</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-subscription-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-subscription" type="button" role="tab" aria-controls="pills-subscription"
+                                aria-selected="false">Subscription</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-per-project" role="tabpanel"
+                            aria-labelledby="pills-per-project-tab">
+                           
+                            <div class="pricing-list-wrap">
+                                
+                                <div class="pricing-box">
+                                    <div class="pricing-box-header">
+                                        <h4>
+                                            PHOTOGRAPHY 
+                                            <div class="pricing-tooltip">
+                                                <span class="tooltip-btn">?</span>
+                                                <div class="tooltip-content">
+                                                    <p>UNLOCK 10%-20% OFF FROM 2ND ORDER</p>
+                                                    <ul>
+                                                        <li>• Save time & effort with automatic monthly orders</li>
+                                                        <li>• No commitment—cancel anytime</li>
+                                                        <li>• Work long-term with your seller for best results</li>
+                                                        <li>• We’ll send you a reminder before each order</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </h4>
+                                        <h3>€99<span>/SHOOT</span></h3>
+                                        <span class="day-revisions">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false" color="rgb(29, 29, 31)"><g color="rgb(29, 29, 31)" weight="bold"><path d="M128,20A108,108,0,1,0,236,128,108.12,108.12,0,0,0,128,20Zm0,192a84,84,0,1,1,84-84A84.09,84.09,0,0,1,128,212Zm68-84a12,12,0,0,1-12,12H128a12,12,0,0,1-12-12V72a12,12,0,0,1,24,0v44h44A12,12,0,0,1,196,128Z"></path></g></svg> 10 DAYS DELIVERY</span>
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false" color="rgb(29, 29, 31)"><g color="rgb(29, 29, 31)" weight="bold"><path d="M200.49,183.51a12,12,0,0,1,0,17c-1.13,1.12-28,27.51-72.49,27.51-33.71,0-59.35-17.46-76-33.86V208a12,12,0,0,1-24,0V160a12,12,0,0,1,12-12H88a12,12,0,0,1,0,24H64.12c13.1,14.32,35.08,32,63.88,32,34.63,0,55.31-20.28,55.51-20.49A12,12,0,0,1,200.49,183.51ZM216,36a12,12,0,0,0-12,12V61.86C187.35,45.46,161.71,28,128,28,83.54,28,56.64,54.39,55.51,55.51a12,12,0,0,0,17,17C72.69,72.28,93.37,52,128,52c28.8,0,50.78,17.68,63.88,32H168a12,12,0,0,0,0,24h48a12,12,0,0,0,12-12V48A12,12,0,0,0,216,36Z"></path></g></svg> 5 REVISIONS</span>
+                                        </span>
+                                        <span class="discount">*SAVE UP TO 20% WITH SUBSCRIBE TO SAVE</span>
+                                        <p><strong>An experienced</strong> and qualified photographer with good communications skills and great time-management</p>
+                                    </div>
+                                    <div class="pricing-box-features">
+                                        <h5>WHAT'S INCLUDED</h5>
+                                        <ul>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(29, 29, 31)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Balance is used to illustrate</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(29, 29, 31)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Rhythm & Negative Space</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(29, 29, 31)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Patterns of art and design</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(29, 29, 31)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Emphasis in a photo</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(29, 29, 31)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Contrasting subjects</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(29, 29, 31)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Pre - visualizing</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(29, 29, 31)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Shutter Movement Speed</li>
+                                        </ul>
+                                    </div>
+                                    <div class="pricing-box-bottom">
+                                        <a href="#" class="theme-btn">Get Started<span> With Photography</span></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="pills-subscription" role="tabpanel"
+                            aria-labelledby="pills-subscription-tab">
+                           
+                            <div class="pricing-list-wrap">
+                                
+                                <div class="pricing-box">
+                                    <div class="pricing-box-header">
+                                        <h4>
+                                            PHOTOGRAPHY 
+                                            <div class="pricing-tooltip">
+                                                <span class="tooltip-btn">?</span>
+                                                <div class="tooltip-content">
+                                                    <p>UNLOCK 10%-20% OFF FROM 2ND ORDER</p>
+                                                    <ul>
+                                                        <li>• Save time & effort with automatic monthly orders</li>
+                                                        <li>• No commitment—cancel anytime</li>
+                                                        <li>• Work long-term with your seller for best results</li>
+                                                        <li>• We’ll send you a reminder before each order</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </h4>
+                                        <h3>€1299<span>/Per Year</span></h3>
+                                        <span class="day-revisions">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false" color="rgb(29, 29, 31)"><g color="rgb(29, 29, 31)" weight="bold"><path d="M128,20A108,108,0,1,0,236,128,108.12,108.12,0,0,0,128,20Zm0,192a84,84,0,1,1,84-84A84.09,84.09,0,0,1,128,212Zm68-84a12,12,0,0,1-12,12H128a12,12,0,0,1-12-12V72a12,12,0,0,1,24,0v44h44A12,12,0,0,1,196,128Z"></path></g></svg> QUICK DELIVERY</span>
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false" color="rgb(29, 29, 31)"><g color="rgb(29, 29, 31)" weight="bold"><path d="M200.49,183.51a12,12,0,0,1,0,17c-1.13,1.12-28,27.51-72.49,27.51-33.71,0-59.35-17.46-76-33.86V208a12,12,0,0,1-24,0V160a12,12,0,0,1,12-12H88a12,12,0,0,1,0,24H64.12c13.1,14.32,35.08,32,63.88,32,34.63,0,55.31-20.28,55.51-20.49A12,12,0,0,1,200.49,183.51ZM216,36a12,12,0,0,0-12,12V61.86C187.35,45.46,161.71,28,128,28,83.54,28,56.64,54.39,55.51,55.51a12,12,0,0,0,17,17C72.69,72.28,93.37,52,128,52c28.8,0,50.78,17.68,63.88,32H168a12,12,0,0,0,0,24h48a12,12,0,0,0,12-12V48A12,12,0,0,0,216,36Z"></path></g></svg> 20 PROJECTS</span>
+                                        </span>
+                                        <span class="discount">*YOU ARE SAVING 20% WITH THIS PLAN</span>
+                                        <p><strong>An experienced</strong> and qualified photographer with good communications skills and great time-management</p>
+                                    </div>
+                                    <div class="pricing-box-features">
+                                        <h5>WHAT'S INCLUDED</h5>
+                                        <ul>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(29, 29, 31)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Balance is used to illustrate</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(29, 29, 31)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Rhythm & Negative Space</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(29, 29, 31)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Patterns of art and design</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(29, 29, 31)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Emphasis in a photo</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(29, 29, 31)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Contrasting subjects</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(29, 29, 31)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Pre - visualizing</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(29, 29, 31)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Shutter Movement Speed</li>
+                                        </ul>
+                                    </div>
+                                    <div class="pricing-box-bottom">
+                                        <a href="{% url "contact" %}"  class="theme-btn">Get Started With Photography</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ===== Pricing End ===== -->
+
+
+
+
+     
+
+             <!-- ===== CTA Start ===== -->
+             <section class="cta-sec">
+                <div class="section-header2">
+                    <h3 class="title">
+                        <span>LET'S WORK</span>
+                        <span>TOGETHER</span>
+                    </h3>
+                    <a href="{% url "contact" %}" class="theme-btn">CONTACT</a>
+                </div>
+
+                <div class="cta-content about-bottom-content-wrap">
+                    <div class="img-box">
+                        <div class="img-box-inner">
+                            <img data-jarallax-element="-20 0" src="{% static 'assets/imgs/photo_2024-08-10_13-09-00.jpg' %}" alt="About">
+                        </div>
+                    </div>
+                    <div class="about-bottom-content">
+                        <div>
+                            <p>I'M AN INDEPENDENT PHOTOGRAPHER BASED IN GERMANY. <br>PHOTOGRAPHY IS MY PASSION, AND I AM DEDICATED TO CAPTURING<br> THE BEAUTY OF LIFE'S MOST PRECIOUS MOMENTS.</p>
+                        </div>
+                        <ul class="social-links">
+                            <li>
+                                <a href="https://instagram.com/" target="_blank">Instagram <svg xmlns="http://www.w3.org/2000/svg"
+                                        focusable="false" viewBox="0 0 24 24" color="rgb(29, 29, 31)">
+                                        <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
+                                        </path>
+                                    </svg></a>
+                            </li>
+                            <li>
+                                <a href="https://vogue.com/" target="_blank">Vogue <svg xmlns="http://www.w3.org/2000/svg"
+                                        focusable="false" viewBox="0 0 24 24" color="rgb(29, 29, 31)">
+                                        <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
+                                        </path>
+                                    </svg></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/" target="_blank">Twitter <svg xmlns="http://www.w3.org/2000/svg"
+                                        focusable="false" viewBox="0 0 24 24" color="rgb(29, 29, 31)">
+                                        <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
+                                        </path>
+                                    </svg></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- ===== CTA End ===== -->
+
+
+                <!-- ===== Footer Start ===== -->
+                <footer class="footer-area">
+                    <div class="footer-big-text">
+                        <span class="timeline-anim scroll-animation" data-animation="slide_down">MOSES CHIMEREZE</span>
+                    </div>
+
+                    <div class="copyright">
+                        <p>&copy;2024 MOSES.CAM</p>
+                        <div class="right">
+                            <a href="#" id="back-to-top">GO BACK TO TOP</a>
+                        </div>
+                    </div>
+                </footer>
+                <!-- ===== Footer End ===== -->
+
+
+            </div>
+        </div>
+        <!-- ===== Smooth Scroll End ===== -->
+
+
+
+ {% endblock content %}
