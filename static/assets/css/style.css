@@ -839,7 +839,7 @@ strong {
 .featured-card .content {
     background: #f5f5f7;
     padding: 0 26px 0 26px;
-    height: 70px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;

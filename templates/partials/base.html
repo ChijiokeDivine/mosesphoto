@@ -245,6 +245,31 @@
 
 
     <!-- ===== Scripts ===== -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll("img");
+        
+            images.forEach(image => {
+                // Check if the image has loaded correctly
+                if (!image.complete || image.naturalWidth === 0) {
+                    // If not, reload the image
+                    const src = image.src;
+                    image.src = "";  // Temporarily unset the src to force reload
+                    image.src = src;
+        
+                    // Optional: Log or handle the error
+                    console.log(`Image failed to load: ${src}. Retrying...`);
+        
+                    // Retry once if the image still fails after the first reload
+                    image.onerror = () => {
+                        console.log(`Retry failed for: ${src}`);
+                        // Implement additional logic here if needed, e.g., fallback image
+                    };
+                }
+            });
+        });
+        
+    </script>
     <script src="{% static 'assets/js/jquery.js' %}"></script>
     <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'assets/js/gsap.min.js' %}"></script>
