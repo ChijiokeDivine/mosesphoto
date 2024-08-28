@@ -22,6 +22,8 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+    def url(self):
+        return f"/category/{self.slug}"
     class Meta:
         verbose_name_plural = "Categories"
 
@@ -34,6 +36,11 @@ class Photo(models.Model):
 
     def __str__(self):
         return f"Picture for {self.name}"
+    def url(self):
+        return f"/photos/{self.slug}"
+    def photo_image(self):
+        if self.image:
+            return mark_safe('<img src="%s" width="50" height="50" />' % (self.image.url))
     class Meta:
         verbose_name_plural = "Photos"
     
@@ -41,14 +48,13 @@ class PhotoMedia(models.Model):
     images = CloudinaryField('media', folder="media", resource_type='auto')
     photo = models.ForeignKey(Photo, related_name="p_media", on_delete=models.SET_NULL, null=True)
     date = models.DateTimeField(auto_now_add=True)
+
     def __str__(self):
-        return self.name
+        return self.photo.name  # Assuming Photo has a 'name' attribute
     
     def save(self, *args, **kwargs):
-        if self.image:
-            # Download the image from Cloudinary
-            response = requests.get(self.image.url)
-            img = Image.open(BytesIO(response.content))
+        if self.images and isinstance(self.images.file, InMemoryUploadedFile):
+            img = Image.open(self.images.file)
 
             # Resize the image to the desired dimensions (280x320)
             img = img.resize((280, 320), Image.ANTIALIAS)
@@ -59,14 +65,17 @@ class PhotoMedia(models.Model):
             output.seek(0)
 
             # Update the image field with the resized image
-            self.image = InMemoryUploadedFile(output, 'ImageField', 
-                                              f"{self.image.public_id}.webp", 
-                                              'image/webp', 
-                                              output.getbuffer().nbytes, 
-                                              None)
-
+            self.images = InMemoryUploadedFile(
+                output, 'ImageField',
+                f"{self.images.name.split('.')[0]}.webp", 
+                'image/webp',
+                output.getbuffer().nbytes,
+                None
+            )
+        
         # Call the original save method to save the model instance
         super(PhotoMedia, self).save(*args, **kwargs)
+    
     def delete(self, *args, **kwargs):
         # Delete the image from Cloudinary before deleting the Blog object
         if self.images:
@@ -76,6 +85,7 @@ class PhotoMedia(models.Model):
             cloudinary.uploader.destroy(public_id)
         # Call the parent class delete method to delete the Blog object
         super().delete(*args, **kwargs)
+    
     class Meta:
         verbose_name_plural = "Photo medias"
 

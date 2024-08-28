@@ -19,10 +19,10 @@ def pricing(request):
 
 def categories_detail(request, slug):
     category = Category.objects.get(slug=slug)
-    products = Photo.objects.filter( category=category)
+    photos = Photo.objects.filter( category=category)
     context = {
         'category': category,
-        'products': products
+        'photos': photos
     }
     return render(request, "work.html", context)
 
@@ -35,10 +35,11 @@ def category_list(request):
     return render(request, "photography.html")
 
 def work_detail(request, slug):
-    photos = Photo.objects.get(slug=slug)
-
+    photo = Photo.objects.get(slug=slug)
+    recommended_photos = Photo.objects.filter(category=photo.category).order_by("?")[:2]
     context = {
-        'photos': photos
+        'photo': photo,
+        're_photo': recommended_photos,
     }
     return render(request, "work-detail-1.html", context)
 

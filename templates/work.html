@@ -51,7 +51,7 @@
                         </span>
 
                         <h1>
-                            <span><span class="timeline-anim scroll-animation" data-animation="slide_down">WORK</span></span>
+                            <span><span class="timeline-anim scroll-animation" data-animation="slide_down">{{category}}</span></span>
                         </h1>
                     </div>
                     <!-- ===== Hero Section Content End ===== -->
@@ -62,135 +62,24 @@
                 <!-- ===== Featured Work Start ===== -->
                 <div class="featured-work-sec mt-30">
                     <div class="featured-work-lists">
-
+                        {% for p in photos %}
                         <!-- Featured Cart -->
                         <div class="featured-card">
-                            <a class="link-overlay" href="work-detail-1.html"></a>
+                            <a class="link-overlay" href="{{p.url}}"></a>
                             <div class="img-box">
-                                <img src="{% static 'assets/imgs/work-1.jpg' %}" alt="Work">
+                                <img src="{{p.image.url}}" alt="Work">
                             </div>
                             <div class="content">
                                 <div class="left">
-                                    <p class="title">Hella magic store</p>
-                                    <p class="subtitle">Business</p>
+                                    <p class="title">{{p.name}}</p>
+                                    <p class="subtitle">{{p.category.name}}</p>
                                 </div>
                                 <div class="right">
                                     <span class="date">2024</span>
                                 </div>
                             </div>
                         </div>
-                        <!-- Featured Cart -->
-                        <div class="featured-card">
-                            <a class="link-overlay" href="work-detail-2.html"></a>
-                            <div class="img-box">
-                                <img src="{% static 'assets/imgs/work-2.jpg' %}" alt="Work">
-                            </div>
-                            <div class="content">
-                                <div class="left">
-                                    <p class="title">Raven Folio</p>
-                                    <p class="subtitle">Portfolio</p>
-                                </div>
-                                <div class="right">
-                                    <span class="date">2023</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Featured Cart -->
-                        <div class="featured-card">
-                            <a class="link-overlay" href="work-detail.html"></a>
-                            <div class="img-box">
-                                <img src="{% static 'assets/imgs/work-4.jpeg' %}" alt="Work">
-                            </div>
-                            <div class="content">
-                                <div class="left">
-                                    <p class="title">Elementor</p>
-                                    <p class="subtitle">Themes</p>
-                                </div>
-                                <div class="right">
-                                    <span class="date">2022</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Featured Cart -->
-                        <div class="featured-card">
-                            <a class="link-overlay" href="work-detail-4.html"></a>
-                            <div class="img-box">
-                                <img src="{% static 'assets/imgs/work-7.jpg' %}" alt="Work">
-                            </div>
-                            <div class="content">
-                                <div class="left">
-                                    <p class="title">WELLBEING</p>
-                                    <p class="subtitle">Marketplace</p>
-                                </div>
-                                <div class="right">
-                                    <span class="date">2023</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Featured Cart -->
-                        <div class="featured-card">
-                            <a class="link-overlay" href="work-detail-5.html"></a>
-                            <div class="img-box">
-                                <img src="{% static 'assets/imgs/work-3.jpg' %}" alt="Work">
-                            </div>
-                            <div class="content">
-                                <div class="left">
-                                    <p class="title">Xiong wall</p>
-                                    <p class="subtitle">Marketplace</p>
-                                </div>
-                                <div class="right">
-                                    <span class="date">2023</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Featured Cart -->
-                        <div class="featured-card">
-                            <a class="link-overlay" href="work-detail-6.html"></a>
-                            <div class="img-box">
-                                <img src="{% static 'assets/imgs/work-5.jpeg' %}" alt="Work">
-                            </div>
-                            <div class="content">
-                                <div class="left">
-                                    <p class="title">Louis Phillips</p>
-                                    <p class="subtitle">Portfolio</p>
-                                </div>
-                                <div class="right">
-                                    <span class="date">2022</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Featured Cart -->
-                        <div class="featured-card">
-                            <a class="link-overlay" href="work-detail-7.html"></a>
-                            <div class="img-box">
-                                <img src="{% static 'assets/imgs/work-8.jpg' %}" alt="Work">
-                            </div>
-                            <div class="content">
-                                <div class="left">
-                                    <p class="title">Canvas Barn</p>
-                                    <p class="subtitle">Portfolio</p>
-                                </div>
-                                <div class="right">
-                                    <span class="date">2024</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Featured Cart -->
-                        <div class="featured-card">
-                            <a class="link-overlay" href="work-detail-8.html"></a>
-                            <div class="img-box">
-                                <img src="{% static 'assets/imgs/work-6.jpg' %}" alt="Work">
-                            </div>
-                            <div class="content">
-                                <div class="left">
-                                    <p class="title">Panda Do</p>
-                                    <p class="subtitle">Branding</p>
-                                </div>
-                                <div class="right">
-                                    <span class="date">2024</span>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
 
                     </div>
                 </div>

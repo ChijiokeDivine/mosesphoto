@@ -149,9 +149,9 @@
                         {% for c in categories %}
                         <!-- Featured Cart -->
                         <div class="featured-card">
-                            <a class="link-overlay" href="work-detail-1.html"></a>
+                            <a class="link-overlay" href="{{c.url}}"></a>
                             <div class="img-box">
-                                <img src="{% static 'assets/imgs/work-1.jpg' %}" alt="Work">
+                                <img src="{{c.image.url}}" alt="Work">
                             </div>
                             <div class="content">
                                 <div class="left">
@@ -489,11 +489,9 @@
                 <!-- ===== Motivation End ===== -->
 
                 <!-- ===== Full Image Start ===== -->
-                <div class="full-image-sec">
-                    <div class="full-image-box">
-                        <img class="scaleDown" src="{% static 'assets/imgs/work-4.jpeg' %}" alt="about">
-                    </div>
-                </div>
+                <div class="video-sec">
+                    <video src="{% static 'assets/imgs/dark-mode/video-2.mp4' %}" loop="true" muted="true" autoplay playsinline=""></video>
+                </div> 
                 <!-- ===== Full Image End ===== -->
 
 
