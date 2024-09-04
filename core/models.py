@@ -7,6 +7,7 @@ from django.core.files.uploadedfile import InMemoryUploadedFile
 import cloudinary
 import requests
 from cloudinary.models import CloudinaryField
+
           
 cloudinary.config( 
   cloud_name = getattr(settings, 'CLOUD_NAME_SECRET', None), 
@@ -90,16 +91,25 @@ class PhotoMedia(models.Model):
         verbose_name_plural = "Photo medias"
 
 class Booking(models.Model):
+    REFERRAL_CHOICES = [
+        ('google_search', 'Google Search'),
+        ('instagram', 'Instagram'),
+        ('recommendation', 'Recommendation'),
+        ('blog', 'Blog'),
+        ('social_media', 'Social Media'),
+        ('other', 'Other'),
+    ]
     name = models.CharField(max_length=100)
     email = models.EmailField()
     phone_number = models.CharField(max_length=15)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    date_requested = models.DateTimeField()
     additional_details = models.TextField(blank=True, null=True)
+    heard_about_us = models.CharField(max_length=50,choices=REFERRAL_CHOICES,default='other',)
     date_created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f"Booking by {self.name} for {self.category} on {self.date_requested}"
+
 
 class PhotoshootSchedule(models.Model):
     booking = models.OneToOneField(Booking, on_delete=models.CASCADE)

@@ -58,27 +58,51 @@
                         <div class="contact-form">
                             <h4>FILL THIS FORM OUT</h4>
                             <form id="ajax-form" action="" method="POST">
-                                <input type="hidden" name="access_key" value="0ea6f02e-35e1-4bc8-801a-f700e7c5a95c">
-                                <input type="checkbox" name="botcheck" id="botcheck" style="display: none;">
+                                
+                               {% csrf_token %}
 
                                 <div class="input-group">
                                     <input type="text" name="name" id="name" placeholder="Name">
                                 </div>
-                                <div class="input-group">
-                                    <input type="email" name="email" id="email" placeholder="E-mail">
+                                <div class="input-group-row">
+                                    <div class="input-group">
+                                        <input type="email" name="email" id="email" placeholder="E-mail">
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="phone" name="phone" id="phone" placeholder="Phone">
+                                    </div>
+                                </div>
+                                <div class="input-group-row">
+                                    <div class="input-group">
+                                        <select name="category" id="category" >
+                                            <option value="">Select a Category</option>
+                                            {% for category in categories %}
+                                                <option value="{{ category.id }}">{{ category.name }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="input-group">
+                                        <select name="heard_about_us" id="heard_about_us">
+                                            <option value="">How did you hear about us?</option>
+                                            {% for value, label in referral_choices %}
+                                                <option value="{{ value }}">{{ label }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="input-group">
                                     <textarea name="message" id="message" placeholder="Message"></textarea>
                                 </div>
                                 <div class="input-group mb-0">
-                                    <button class="theme-btn2">Send Email</button>
+                                    <button class="theme-btn2" type="submit">Send Email</button>
                                 </div>
                                 <p id="result"></p>
                             </form>
                         </div>
                     </div>
                     <div class="contact-img">
-                        <img data-jarallax-element="-20 0" src="{% static 'assets/imgs/Blue Outfit-5.webp' %}" alt="about">
+                        <img data-jarallax-element="-20 0" style="border-radius: 1.25rem;" src="{% static 'assets/imgs/Street pictures for website-3-1.jpg' %}" alt="about">
                     </div>
                 </section>
                 <!-- ===== Contact End ===== -->
@@ -136,5 +160,28 @@
             </div>
         </div>
         <!-- ===== Smooth Scroll End ===== -->
-
+<style>
+    .input-group-row {
+        display: flex;
+        gap: 10px; /* Adjust the spacing between the fields */
+    }
+    
+    .input-group-row .input-group {
+        flex: 1; /* Ensures both fields take equal space */
+    }
+    
+    .input-group-row input {
+        width: 100%;
+        box-sizing: border-box; /* Ensures padding is included in width */
+    }
+    
+    /* Media query for mobile devices */
+    @media (max-width: 767px) {
+        .input-group-row {
+            flex-direction: column; /* Stack the fields vertically */
+        }
+    }
+    
+    
+</style>
 {% endblock content %}
