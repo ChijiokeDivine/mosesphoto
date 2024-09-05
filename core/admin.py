@@ -3,7 +3,7 @@ from django.contrib.auth.models import Group
 from .models import Category, Photo, Booking, PhotoshootSchedule, PhotoMedia
 
 # Register your models here.
-
+admin.site.site_header = "Moses.cam Admin"
 class PhotoMediaAdmin(admin.TabularInline):
     model = PhotoMedia
 

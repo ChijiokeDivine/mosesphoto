@@ -1,0 +1,71 @@
+
+{% extends "admin/base_site.html" %}
+{% load static %}
+{% block title %}MOSES.CAM - Administration{% endblock %}
+{% block extrahead %}
+    {{ block.super }}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="{% static "favicon_io/apple-touch-icon.png" %}">
+<link rel="icon" href="{% static "favicon_io/apple-touch-icon.png" %}">
+<link rel="apple-touch-icon" sizes="180x180" href="{% static "favicon_io/apple-touch-icon.png" %}">
+<link rel="icon" type="image/png" sizes="32x32" href="{% static "favicon_io/favicon-32x32.png" %}">
+<link rel="icon" type="image/png" sizes="16x16" href="{% static "favicon_io/favicon-16x16.png" %}">
+<link rel="manifest" href="{% static "favicon_io/site.webmanifest" %}">
+    <style>
+        #header{
+            
+            font-family: 'Poppins', sans-serif;
+        }
+        #branding h1 a:link, #branding h1 a:visited{
+            color: #fff;
+        }
+        #nav-filter{
+            height: 50px;
+            border-radius: 5px;
+            
+        }
+        @media (max-width: 768px) {
+            .breadcrumbs{
+           
+                display: none;
+            }
+            #recent-actions-module{
+                display: none;
+            }
+            #changelist-filter{
+                display: none;
+            }
+        }
+        button{
+            font-family: 'Poppins', sans-serif !important;
+        }
+        .breadcrumbs{
+           
+            font-family: 'Poppins', sans-serif;
+        }
+        input[type="submit"]{
+            
+            font-family: 'Poppins', sans-serif;
+        }
+        input[type="submit"]:hover{
+            font-family: 'Poppins', sans-serif;
+        }
+        caption{
+
+            font-family: 'Poppins', sans-serif !important;
+        }
+        th a, .changelink, .deletelink, .content, input,select{
+            font-family: 'Poppins', sans-serif !important;
+        }
+        td a, th, td{
+            font-family: 'Poppins', sans-serif !important;
+        }
+        h1{
+            font-family: 'Poppins', sans-serif !important;
+        }
+    </style>
+
+{% endblock %}
