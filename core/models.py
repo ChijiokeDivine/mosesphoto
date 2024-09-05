@@ -20,6 +20,7 @@ class Category(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(blank=True, null=True)
     image = CloudinaryField(folder="category-images")
+    starts_from = models.DecimalField(max_digits=10, decimal_places=2, default="99")
     slug = models.SlugField(unique=True)
 
     def __str__(self):

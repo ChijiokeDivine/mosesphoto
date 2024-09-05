@@ -8,7 +8,7 @@
             <div id="smooth-content">
 
                 <!-- ===== Hero Section Start ===== -->
-                <section class="hero-sec hero-sec3">
+                <section class="hero-sec hero-sec2">
 
                     <!-- ===== Header Start ===== -->
                     <header class="header-wrap scroll-animation" data-animation="slide_up">
@@ -16,13 +16,13 @@
 
                             <!-- ===== Local Time ===== -->
                             <div class="header-local-time-box">
-                                <a href="/"><span>Home/</span></a>
+                                <a href="/"><span>Local/</span></a>
                                 <span id="realtime">00:00</span>
                             </div>
 
                             <div class="header-middle">
                                 <div class="humberg-menu">
-                                    <a href="{% url "contact" %}">
+                                    <a href="{% url "contact" %}" >
                                         <?xml version="1.0" encoding="UTF-8"?>
                                         <svg width="30px" height="30px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000">
                                             <path d="M9 9L13.5 12L18 9" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -39,74 +39,36 @@
                             <div class="header-right">
                                 <a href="#" class="theme-btn">navigate</a>
                             </div>
-
                         </div>
                     </header>
                     <!-- ===== Header End ===== -->
 
+
+                    <!-- ===== Hero Section Content Start ===== -->
+                    <div class="hero-sec-content">
+                        
+                        <h1>
+                            <span><span class="timeline-anim scroll-animation" data-animation="slide_down">ALL CATEGORIES</span></span>
+                        </h1>
+                    </div>
+                    <!-- ===== Hero Section Content End ===== -->
+
                 </section>
                 <!-- ===== Hero Section End ===== -->
 
-
-            
-                <!-- ===== Work Detail Header End ===== -->
-
-
-                <!-- ===== Work Detail Full Image Start ===== -->
-                <div class="work-detail-full-img-wrap">
-                    
-                        <div class="work-detail-full-img-inner">
-                            <img data-jarallax-element="-30 0" style="border-radius: 1.25rem;" src="{{photo.image.url}}" alt="work">
-                        </div>
-                    
-                </div>
-                <!-- ===== Work Detail Full Image End ===== -->
-
-    
-
-             
-                <!-- ===== Work Detail2 End ===== -->
-
-
-                <!-- ===== Work Detail Full Image Start ===== -->
-                <div class="work-detail-full-img-wrap work-detail-full-img-wrap2">
-                    {% for p in p_images %}
-                   
-                        <div class="work-detail-full-img-inner">
-                            <img data-jarallax-element="-30 0" style="border-radius: 1.25rem;" src="{{p.images.url}}" alt="work">
-                        </div>
-                    {% endfor %}
-                  
-                </div>
-                <!-- ===== Work Detail Full Image End ===== -->
-
-
-                <!-- ===== Work Detail Text Animation Start ===== -->
-                <div class="work-detail-text-anim-wrap" style="margin-bottom: 30px; margin-top: 40px;">
-                    <ul>
-                        <li>MORE WORKS <span>MORE WORKS</span></li>
-                        <li>MORE WORKS <span>MORE WORKS</span></li>
-                        <li>MORE WORKS <span>MORE WORKS</span></li>
-                    
-                    </ul>
-                </div>
-                <!-- ===== Work Detail Text Animation End ===== -->
-
-
-                <!-- ===== Work Start ===== -->
-                <div class="work-detail-featured-work-wrap" style="margin-bottom: 60px;">
+                <!-- ===== Featured Work Start ===== -->
+                <div class="featured-work-sec mt-30">
                     <div class="featured-work-lists">
-                        {% for p in re_photo %}
+                        {% for c in categories %}
                         <!-- Featured Cart -->
                         <div class="featured-card">
-                            <a class="link-overlay" href="{{p.url}}"></a>
-                            <div class="img-box">
-                                <img src="{{p.image.url}}" alt="Work">
+                            <a class="link-overlay" href="{{c.url}}"></a>
+                            <div class="img-box" >
+                                <img src="{{c.image.url}}" alt="{{c.name}}">
                             </div>
                             <div class="content">
                                 <div class="left">
-                                    <p class="title">{{p.name}}</p>
-                                    <p class="subtitle">{{p.category.name}}</p>
+                                    <p class="title">{{c.name}}</p>
                                 </div>
                             
                             </div>
@@ -115,8 +77,7 @@
 
                     </div>
                 </div>
-                <!-- ===== Work End ===== -->
-
+                <!-- ===== Featured Work End ===== -->
 
                 <!-- ===== Footer Start ===== -->
                 <footer class="footer-area">
@@ -137,5 +98,4 @@
             </div>
         </div>
         <!-- ===== Smooth Scroll End ===== -->
-
 {% endblock content %}

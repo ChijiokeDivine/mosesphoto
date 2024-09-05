@@ -16,7 +16,7 @@
 
                             <!-- ===== Local Time ===== -->
                             <div class="header-local-time-box">
-                                <a href="/"><span>Local/</span></a>
+                                <a href="/"><span>Home/</span></a>
                                 <span id="realtime">00:00</span>
                             </div>
 
@@ -51,7 +51,7 @@
                         </span>
 
                         <h1>
-                            <span><span class="timeline-anim scroll-animation" data-animation="slide_down">{{category}}</span></span>
+                            <span><span class="timeline-anim scroll-animation" data-animation="slide_down">{{category|upper}}</span></span>
                         </h1>
                     </div>
                     <!-- ===== Hero Section Content End ===== -->
@@ -66,15 +66,10 @@
                         <!-- Featured Cart -->
                         <div class="featured-card">
                             <a class="link-overlay" href="{{p.url}}"></a>
-                            <div class="img-box">
-                                <img src="{{p.image.url}}" alt="Work">
+                            <div class="img-box" style="height: auto;">
+                                <img src="{{p.image.url}}"  alt="Work">
                             </div>
-                            <div class="content">
-                                <div class="left">
-                                    <p class="title">{{p.name}}</p>
-                                </div>
-                            
-                            </div>
+                           
                         </div>
                         {% endfor %}
 

@@ -1,5 +1,6 @@
 {% extends "partials/base.html" %}
 {% load static %}
+
 {% block content %}
         <!-- ===== Popup Menu End ===== -->
 
@@ -16,7 +17,7 @@
 
                             <!-- ===== Local Time ===== -->
                             <div class="header-local-time-box">
-                                <a href="/"><span>Local/</span></a>
+                                <a href="/"><span>Home/</span></a>
                                 <span id="realtime">00:00</span>
                             </div>
 
@@ -47,13 +48,11 @@
 
                     <!-- ===== Hero Section Content Start ===== -->
                     <div class="hero-sec-content">
-                        <span class="available-status">
-                            (2012 - 2024)
-                        </span>
+                  
 
                         <h1>
                             <span><span class="timeline-anim scroll-animation" data-animation="slide_down">GALLERY</span></span>
-                            <span><span class="timeline-anim scroll-animation" data-animation="slide_down">ENDEAVORS</span></span>
+                         
                         </h1>
                     </div>
                     <!-- ===== Hero Section Content End ===== -->
@@ -64,59 +63,62 @@
 
                 <!-- ===== Photography Start ===== -->
                 <div class="photography-sec">
-                    <div class="photography-col">
-                        <div class="photography-box">
-                            <div class="photography-box-inner">
-                                <img class="scaleDown" src="assets/imgs/dark-mode/photography-1.jpg" alt="photography">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="photography-col photography-col2">
-                        <div class="photography-box">
-                            <div class="photography-box-inner">
-                                <img class="scaleDown" src="assets/imgs/dark-mode/photography-2.jpg" alt="photography">
-                            </div>
-                        </div>
-                        <div class="photography-box">
-                            <img src="assets/imgs/dark-mode/photography-3.jpg" alt="photography">
-                        </div>
-                    </div>
-                    <div class="photography-col photography-col2">
-                        <div class="photography-inner-col">
+                    <div class="photography-grid">
+                        {% for photo in photos %}
+                        
+                        <div class="photography-item {% if photo.image.width > photo.image.height %}horizontal{% else %}vertical{% endif %}">
                             <div class="photography-box">
-                                <img src="assets/imgs/dark-mode/photography-4.jpg" alt="photography">
-                            </div>
-                            <div class="photography-box">
-                                <video src="assets/imgs/dark-mode/video-2.mp4" loop="true" muted="true" autoplay playsinline=""></video>
-                            </div>
-                        </div>
-                        <div class="photography-box">
-                            <div class="photography-box-inner">
-                                <img class="scaleDown" src="assets/imgs/dark-mode/photography-5.jpg" alt="photography">
+                                <div class="photography-box-inner">
+                                    <a href="{{photo.url}}">
+                                    <img class="scaleDown" src="{{ photo.image.url }}" alt="photography">
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="photography-col">
-                        <div class="photography-box">
-                            <img src="assets/imgs/dark-mode/photography-6.png" alt="photography">
-                        </div>
-                    </div>
-                    <div class="photography-col photography-col2">
-                        <div class="photography-box">
-                            <div class="photography-box-inner">
-                                <img class="scaleDown" src="assets/imgs/dark-mode/photography-2.jpg" alt="photography">
-                            </div>
-                        </div>
-                        <div class="photography-inner-col">
-                            <div class="photography-box">
-                                <img src="assets/imgs/dark-mode/photography-8.jpg" alt="photography">
-                            </div>
-                            <div class="photography-box">
-                                <img src="assets/imgs/dark-mode/photography-9.jpeg" alt="photography">
-                            </div>
-                        </div>
+                        
+                        {% endfor %}
                     </div>
                 </div>
+                <style>
+                    .photography-sec {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    
+                    .photography-grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust based on your design */
+                        gap: 10px; /* Spacing between images */
+                    }
+                    
+                    .photography-item {
+                        position: relative;
+                        overflow: hidden;
+                    }
+                    
+                    .photography-item img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover; /* Ensures that images fill the box without stretching */
+                    }
+                    
+                    .photography-item.horizontal {
+                        grid-column: span 2; /* Takes more space horizontally */
+                    }
+                    
+                    .photography-item.vertical {
+                        grid-row: span 2; /* Takes more space vertically */
+                    }
+                    
+                    .photography-box-inner {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    
+                </style>                
+                
                 <!-- ===== Photography End ===== -->
 
 

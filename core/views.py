@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Photo, Category
+from .models import Photo, Category, PhotoMedia
 from .models import Booking, Category
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -22,7 +22,11 @@ def contact(request):
     return render(request, "contact.html", {'categories': categories,'referral_choices': referral_choices,})
 
 def pricing(request):
-    return render(request, "pricing.html")
+    categories = Category.objects.all()
+    context = {
+        'categories': categories,
+    }
+    return render(request, "pricing.html", context)
 
 def categories_detail(request, slug):
     category = Category.objects.get(slug=slug)
@@ -39,13 +43,15 @@ def category_list(request):
     context = {
         'categories': categories,
     }
-    return render(request, "photography.html")
+    return render(request, "categories.html", context)
 
 def work_detail(request, slug):
     photo = Photo.objects.get(slug=slug)
+    p_images = photo.p_media.all()
     recommended_photos = Photo.objects.filter(category=photo.category).order_by("?")[:2]
     context = {
         'photo': photo,
+        'p_images': p_images,
         're_photo': recommended_photos,
     }
     return render(request, "work-detail-1.html", context)
@@ -83,3 +89,11 @@ def create_booking(request):
 
     # Handle non-POST requests
     return JsonResponse({'message': 'Invalid request method.'}, status=405)
+
+
+def all_photo(request):
+    photos = Photo.objects.all()
+    context = {
+        "photos": photos
+    }
+    return render(request, "photography.html", context)
