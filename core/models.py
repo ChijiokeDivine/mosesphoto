@@ -7,7 +7,8 @@ from django.core.files.uploadedfile import InMemoryUploadedFile
 import cloudinary
 import requests
 from cloudinary.models import CloudinaryField
-
+import pytz
+from django.core.exceptions import ValidationError
           
 cloudinary.config( 
   cloud_name = getattr(settings, 'CLOUD_NAME_SECRET', None), 
@@ -106,9 +107,19 @@ class Booking(models.Model):
     additional_details = models.TextField(blank=True, null=True)
     heard_about_us = models.CharField(max_length=50,choices=REFERRAL_CHOICES,default='other',)
     date_created = models.DateTimeField(auto_now_add=True)
+    def format_booking_info(self):
+        # Define the Berlin timezone
+        berlin_tz = pytz.timezone('Europe/Berlin')
 
+        # Convert UTC time to Berlin time
+        berlin_time = self.date_created.astimezone(berlin_tz)
+
+        # Format the datetime object as a readable string
+        formatted_date = berlin_time.strftime('%d %B %Y, %H:%M %p')  
+
+        return f"Booking by {self.name} for {self.category} on {formatted_date}"
     def __str__(self):
-        return f"Booking by {self.name} for {self.category} on {self.date_requested}"
+        return self.format_booking_info()
 
 
 class PhotoshootSchedule(models.Model):
@@ -118,6 +129,15 @@ class PhotoshootSchedule(models.Model):
 
     def __str__(self):
         return f"Photoshoot for {self.booking.name} on {self.date_scheduled}"
+    def clean(self):
+        # Check if another photoshoot is scheduled for the same date and time
+        if PhotoshootSchedule.objects.filter(date_scheduled=self.date_scheduled).exists():
+            raise ValidationError(f"A photoshoot is already scheduled for {self.date_scheduled}.")
+        
+    def save(self, *args, **kwargs):
+        # Call the clean method to perform validation before saving
+        self.clean()
+        super().save(*args, **kwargs)
 
 
 

@@ -60,9 +60,16 @@
                             <form id="ajax-form" action="" method="POST">
                                 
                                {% csrf_token %}
-
+                               <p class="text-danger" id="ContactErrorMessage" style="border-bottom: none; padding-bottom: 0px;"></p>
+                               <div class="notification" id="notification">
+                                   
+                                   Your message has been received <picture>
+                                    <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f389/512.webp" type="image/webp">
+                                    <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f389/512.gif" alt="🎉" width="22" height="22">
+                                  </picture>
+                               </div>
                                 <div class="input-group">
-                                    <input type="text" name="name" id="name" placeholder="Name">
+                                    <input type="text" name="name" id="fullName" placeholder="Full Name">
                                 </div>
                                 <div class="input-group-row">
                                     <div class="input-group">
@@ -84,7 +91,7 @@
                                     
                                     <div class="input-group">
                                         <select name="heard_about_us" id="heard_about_us">
-                                            <option value="">How did you hear about us?</option>
+                                            <option value="">How did you hear about me?</option>
                                             {% for value, label in referral_choices %}
                                                 <option value="{{ value }}">{{ label }}</option>
                                             {% endfor %}
@@ -95,7 +102,7 @@
                                     <textarea name="message" id="message" placeholder="Message"></textarea>
                                 </div>
                                 <div class="input-group mb-0">
-                                    <button class="theme-btn2" type="submit">Send Email</button>
+                                    <button class="theme-btn2" id="contactSubmit" type="submit">Send</button>
                                 </div>
                                 <p id="result"></p>
                             </form>
@@ -181,7 +188,29 @@
             flex-direction: column; /* Stack the fields vertically */
         }
     }
-    
+    .notification {
+        display: none;
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px;
+        font-size: 14px;
+        background-color: #fefefe;
+        border: 2px solid #f5eaf7;
+        border-radius: 5px;
+        z-index: 1000;
+        animation: slideDown 0.5s ease-in-out;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+      }
+      
+      @keyframes slideDown {
+        0% {
+          transform: translate(-50%, -100%);
+        }
+        100% {
+          transform: translate(-50%, 0);
+        }
+      }
     
 </style>
 {% endblock content %}

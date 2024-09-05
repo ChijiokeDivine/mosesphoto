@@ -53,29 +53,33 @@ def work_detail(request, slug):
 
 @csrf_exempt
 def create_booking(request):
-    # Extract form data from the request
-    name = request.POST.get('name')
-    email = request.POST.get('email')
-    phone_number = request.POST.get('phone_number')
-    category_id = request.POST.get('category')  # Assuming category is passed as ID
-    heard_about_us = request.POST.get('heard_about_us')
-    additional_details = request.POST.get('message', '')  # The message field from the form
-    
-    # Validate and fetch the category object
-    try:
-        category = Category.objects.get(id=category_id)
-    except Category.DoesNotExist:
-        return JsonResponse({'message': 'Invalid category selected.'}, status=400)
-    
-    # Create a new booking instance
-    booking = Booking.objects.create(
-        name=name,
-        email=email,
-        phone_number=phone_number,
-        category=category,
-        heard_about_us=heard_about_us,
-        additional_details=additional_details
-    )
-    
-    # Return a success response
-    return JsonResponse({'message': 'Booking successfully created!'})
+    if request.method == 'POST':
+        # Extract form data from the request
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone_number = request.POST.get('phone')
+        category_id = request.POST.get('category')  # Assuming category is passed as ID
+        heard_about_us = request.POST.get('heard_about_us')
+        additional_details = request.POST.get('message', '')  # The message field from the form
+
+        # Validate and fetch the category object
+        try:
+            category = Category.objects.get(id=category_id)
+        except Category.DoesNotExist:
+            return JsonResponse({'message': 'Invalid category selected.'}, status=400)
+
+        # Create a new booking instance
+        booking = Booking.objects.create(
+            name=name,
+            email=email,
+            phone_number=phone_number,
+            category=category,
+            heard_about_us=heard_about_us,
+            additional_details=additional_details
+        )
+
+        # Return a success response
+        return JsonResponse({'message': 'Booking successfully created!'})
+
+    # Handle non-POST requests
+    return JsonResponse({'message': 'Invalid request method.'}, status=405)
