@@ -56,31 +56,40 @@ $(function () {
     updateProgressBar();
 
 
+/* ===== Real Time (Berlin) ===== */
+if ($('#realtime').length) {
+    startTime();
+}
 
-    /* ===== Real Time ===== */
-    if ($('#realtime').length) {
-        startTime();
-    }
-    function startTime() {
-        var today = new Date();
-        var h = today.getHours();
-        var m = today.getMinutes();
-        var s = today.getSeconds();
-        m = checkTime(m);
-        s = checkTime(s);
-        document.getElementById('realtime').innerHTML =
-            h + ":" + m + ":" + s;
-        var t = setTimeout(startTime, 500);
-    }
-    function checkTime(i) {
-        if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
-        return i;
-    }
+/* ===== Real Time (Berlin) with AM/PM ===== */
+if ($('#realtime').length) {
+    startTime();
+}
+
+function startTime() {
+    var today = new Date();
+    // Convert to Berlin time using Intl.DateTimeFormat with AM/PM
+    var options = {
+        timeZone: 'Europe/Berlin',
+        hour: '2-digit',
+        minute: '2-digit',
+        // second: '2-digit',
+        hour12: true // Use 12-hour format with AM/PM
+    };
+    
+    var berlinTime = new Intl.DateTimeFormat('en-US', options).format(today);
+
+    document.getElementById('realtime').innerHTML = berlinTime;
+    
+    // Call startTime again after 500ms
+    setTimeout(startTime, 500);
+}
+
 
 
     /* ===== Real Time Weather ===== */
     const apiKey = '1906ccd7aa6d7c3683f1b293ee212f01';
-    const city = 'sylhet';
+    const city = 'berlin';
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     fetch(apiUrl)
@@ -100,8 +109,16 @@ $(function () {
             const lonMinutes = Math.floor((longitude - lonDegrees) * 60);
             const lonSeconds = ((longitude - lonDegrees) * 60 - lonMinutes) * 60;
 
+            const timezoneOffset = data.timezone; // Timezone offset in seconds
+            const currentUtcTime = new Date().getTime() + new Date().getTimezoneOffset() * 60000; // Current UTC time
+            const localTime = new Date(currentUtcTime + (timezoneOffset * 1000)); // Berlin local time
+    
+            const hours = localTime.getHours().toString().padStart(2, '0');
+            const minutes = localTime.getMinutes().toString().padStart(2, '0');
+
             // document.getElementById('temperature').textContent = `${temperature}°C`;
-            document.getElementById('coordinates').textContent = `${latDegrees}° ${latMinutes}' ${latSeconds.toFixed(4)}" N`; //, ${lonDegrees}° ${lonMinutes}' ${lonSeconds.toFixed(4)}" E
+            // document.getElementById('coordinates').textContent = `${latDegrees}° ${latMinutes}' ${latSeconds.toFixed(4)}" N`;
+            document.getElementById('temperature').textContent = `${temperature}°C`; 
         })
         .catch(error => {
             console.log('Error fetching data:', error);

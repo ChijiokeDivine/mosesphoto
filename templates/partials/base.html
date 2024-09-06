@@ -110,8 +110,8 @@
         <div class="popup-menu-wrap">
             <div class="popup-menu-header">
                 <div class="local-temperature">
-                    {% comment %} <a href="index.html"><a href="index.html"><span>Local/</span><span id="coordinates"></span></a></a> {% endcomment %}
-                    <a href="/"><a href="/"><span>Local/ </span><span id="realtime">00:00</span></a></a>
+                    {% comment %} <a href="index.html"><a href="index.html"><span>Local/</span><span id="temperature"></span></a></a> {% endcomment %}
+                    <a href="/"><a href="/"><span>Local/ </span><span id="temperature">00:00</span></a></a>
 
                 </div>
 
@@ -234,7 +234,7 @@
             </div>
         </div>
         <!-- ===== Experience Popup End ===== -->
-
+        <div class="gtranslate_wrapper"></div>
     </main>
     <!-- ===== Main End ===== -->
 
@@ -245,7 +245,10 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const images = document.querySelectorAll("img");
-        
+            document.querySelectorAll('img[data-gt-lazy-src]').forEach(function(img) {
+                img.setAttribute('src', img.getAttribute('data-gt-lazy-src'));
+                img.removeAttribute('data-gt-lazy-src');
+            });
             images.forEach(image => {
                 // Check if the image has loaded correctly
                 if (!image.complete || image.naturalWidth === 0) {
@@ -284,7 +287,11 @@
     <script src="{% static 'assets/js/google-translate.js' %}"></script>
     <script src="{% static 'assets/js/swiper8-bundle.min.js' %}"></script>
 
+    <script>window.gtranslateSettings = {"default_language":"en","languages":["en","de"],"wrapper_selector":".gtranslate_wrapper","switcher_horizontal_position":"right"}</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
     <script>
+
+        
         var swiper = new Swiper(".mySwiper", {
           effect: "cards",
           grabCursor: true,

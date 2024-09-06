@@ -4,7 +4,7 @@ from .models import Booking, Category
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
-
+from .utils import alert_owner, booking_confirmed_email
 # Create your views here.
 def home(request):
     categories = Category.objects.all()
@@ -83,7 +83,15 @@ def create_booking(request):
             heard_about_us=heard_about_us,
             additional_details=additional_details
         )
-
+        alert_owner(
+            name=name,
+            email=email,
+            phone_number=phone_number,
+            category=category,
+            heard_about_us=heard_about_us,
+            additional_details=additional_details
+        )
+        booking_confirmed_email(name=name,email=email)
         # Return a success response
         return JsonResponse({'message': 'Booking successfully created!'})
 
