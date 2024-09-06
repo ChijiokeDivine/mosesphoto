@@ -9,7 +9,9 @@ import requests
 from cloudinary.models import CloudinaryField
 import pytz
 from django.core.exceptions import ValidationError
-          
+from django.utils.text import slugify
+
+
 cloudinary.config( 
   cloud_name = getattr(settings, 'CLOUD_NAME_SECRET', None), 
   api_key = getattr(settings, 'API_KEY', None), 
@@ -35,7 +37,7 @@ class Photo(models.Model):
     name = models.CharField(max_length=100)
     image = CloudinaryField(folder="photos")
     description = models.TextField(blank=True, null=True)
-    slug = models.SlugField(unique=True)
+    slug = models.SlugField(unique=True, blank=True)
 
     def __str__(self):
         return f"Picture for {self.name}"
@@ -44,6 +46,10 @@ class Photo(models.Model):
     def photo_image(self):
         if self.image:
             return mark_safe('<img src="%s" width="50" height="50" />' % (self.image.url))
+    def save(self, *args, **kwargs):
+        if not self.slug:  # Generate slug only if it hasn't been set
+            self.slug = slugify(self.name)
+        super(Photo, self).save(*args, **kwargs)
     class Meta:
         verbose_name_plural = "Photos"
     

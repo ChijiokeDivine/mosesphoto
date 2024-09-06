@@ -111,7 +111,7 @@
             <div class="popup-menu-header">
                 <div class="local-temperature">
                     {% comment %} <a href="index.html"><a href="index.html"><span>Local/</span><span id="temperature"></span></a></a> {% endcomment %}
-                    <a href="/"><a href="/"><span>Local/ </span><span id="temperature" translate="no">00:00</span></a></a>
+                    <a href="/"><a href="/"><span id="realtime" translate="no">00:00</span> / <span id="temperature" translate="no">00:00</span></a></a>
 
                 </div>
 
@@ -234,7 +234,7 @@
             </div>
         </div>
         <!-- ===== Experience Popup End ===== -->
-        <div class="gtranslate_wrapper"></div>
+
     </main>
     <!-- ===== Main End ===== -->
 
@@ -287,8 +287,8 @@
     <script src="{% static 'assets/js/google-translate.js' %}"></script>
     <script src="{% static 'assets/js/swiper8-bundle.min.js' %}"></script>
 
-    <script>window.gtranslateSettings = {"default_language":"en","languages":["en","de"],"wrapper_selector":".gtranslate_wrapper","switcher_horizontal_position":"right"}</script>
-    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+    <script>window.gtranslateSettings = {"default_language":"en","languages":["en","de"],"wrapper_selector":".gtranslate_wrapper","flag_size":16,"switcher_horizontal_position":"inline"}</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/dwf.js" defer></script>
     <script>
 
         

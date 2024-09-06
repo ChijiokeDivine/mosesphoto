@@ -27,7 +27,7 @@
                             <!-- ===== Local Time ===== -->
                             <div class="header-local-time-box">
                                 <a href="/"><span>HOME/</span></a>
-                                <span translate="no" id="realtime">00:00</span>
+                                <div class="gtranslate_wrapper"></div>
                                 
                             </div>
 
@@ -160,7 +160,6 @@
                             <div class="content">
                                 <div class="left">
                                     <p class="title">{{c.name}}</p>
-                                    <p class="subtitle">{{c.name|truncatewords:"1"}}</p>
                                 </div>
                                 {% comment %} <div class="right">
                                     <span class="date">2024</span>
@@ -408,6 +407,25 @@
                                 </h4>
                                 <p>Documenting your special moments with a creative eye.</p>
                             </div>
+                            <style>
+                                .experience-box {
+                                   
+                                    overflow: hidden; /* Prevent content overflow */
+                                    /* Additional styles */
+                                }
+                                
+                                .experience-box h4,
+                                .experience-box p {
+                                    white-space: normal; /* Allow text to wrap */
+                                    overflow-wrap: break-word; /* Break long words */
+                                    word-wrap: break-word; /* For broader browser support */
+                                }
+                                
+                                .experience-box h4 span {
+                                    display: inline-block; /* Ensure spans behave correctly */
+                                }
+                                
+                            </style>
                             <div class="experience-box">
                                 <div class="experience-button-box">
                                     <a href="#" class="experience-button">
