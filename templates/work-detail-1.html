@@ -57,7 +57,7 @@
                 <div class="work-detail-full-img-wrap">
                     
                         <div class="work-detail-full-img-inner">
-                            <img data-jarallax-element="-30 0" style="border-radius: 1.25rem;" src="{{photo.image.url}}" alt="work">
+                            <img data-jarallax-element="-30 0" style="border-radius: 1.25rem;" src="{{photo.image.url}}" data-src="{{photo.image.url}}" alt="work">
                         </div>
                     
                 </div>
@@ -74,7 +74,7 @@
                     {% for p in p_images %}
                    
                         <div class="work-detail-full-img-inner">
-                            <img data-jarallax-element="-30 0" style="border-radius: 1.25rem;" src="{{p.images.url}}" alt="work">
+                            <img data-jarallax-element="-30 0" style="border-radius: 1.25rem;" src="{{p.images.url}}" data-src="{{p.images.url}}" alt="work">
                         </div>
                     {% endfor %}
                   
@@ -102,7 +102,7 @@
                         <div class="featured-card">
                             <a class="link-overlay" href="{{p.url}}"></a>
                             <div class="img-box">
-                                <img src="{{p.image.url}}" alt="Work">
+                                <img src="{{p.image.url}}" data-src="{{p.image.url}}" alt="Work">
                             </div>
                             <div class="content">
                                 <div class="left">

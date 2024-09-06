@@ -58,7 +58,7 @@
                 
 
                     <div class="hero-sec-content " id="hero-sec-content">
-                        <img src="{% static "assets/imgs/photo_2024-08-10_13-09-25.jpg" %}" id="disp-img-none" alt="MOSES" width="200" height="250">
+                        <img src="{% static "assets/imgs/photo_2024-08-10_13-09-25.jpg" %}" data-src="{% static "assets/imgs/photo_2024-08-10_13-09-25.jpg" %}" id="disp-img-none" alt="MOSES" width="200" height="250">
                         <span class="available-status">
                 
                               
@@ -95,7 +95,7 @@
                 <!-- ===== Full Image Start ===== -->
                 <div class="full-image-sec pt-30" >
                     <div class="full-image-box">
-                        <img class="scaleDown" src="{% static "assets/imgs/rsz_11photo_2024-08-10_13-09-04-transformed_1.jpg" %}" alt="about">
+                        <img class="scaleDown" src="{% static "assets/imgs/rsz_11photo_2024-08-10_13-09-04-transformed_1.jpg" %}" data-src="{% static "assets/imgs/rsz_11photo_2024-08-10_13-09-04-transformed_1.jpg" %}" alt="about">
                         {% comment %} <img class="scaleDown" src="{% static 'assets/imgs/hero.jpg' %}" alt="about"> {% endcomment %}
                     </div>
                 </div>
@@ -120,14 +120,17 @@
                         </div>
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
-                              <div class="swiper-slide"> <img class="scaleDown"src="{% static "assets/imgs/photo_2024-08-10_13-09-00.jpg" %}" alt="about"></div>
-                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/photo_2024-08-10_13-09-04.jpg" %}" alt="about"></div>
-                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/photo_2024-08-10_13-09-09.jpg" %}" alt="about"></div>
-                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/photo_2024-08-10_13-09-13.jpg" %}" alt="about"></div>
-                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/photo_2024-08-10_13-09-17.jpg" %}" alt="about"></div>
-                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/photo_2024-08-10_13-09-21.jpg" %}" alt="about"></div>
-                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/photo_2024-08-10_13-09-25.jpg" %}" alt="about"></div>
-                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/photo_2024-08-10_13-09-29.jpg" %}" alt="about"></div>
+                              <div class="swiper-slide"> <img class="scaleDown" src="{% static "assets/imgs/KCEE final-14.jpg" %}" data-src="{% static "assets/imgs/KCEE final-14.jpg" %}" alt="about"></div>
+                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/Street pictures for website.jpg" %}" data-src="{% static "assets/imgs/Street pictures for website.jpg" %}" alt="about"></div>
+                              <div class="swiper-slide"> <img class="scaleDown" src="{% static "assets/imgs/Spendy Finals-34.jpg" %}" data-src="{% static "assets/imgs/Spendy Finals-34.jpg" %}" alt="about"></div>
+                              <div class="swiper-slide"> <img class="scaleDown"src="{% static "assets/imgs/KCEE final-16.jpg" %}" data-src="{% static "assets/imgs/KCEE final-16.jpg" %}" alt="about"></div>
+                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/Street pictures for website-6.jpg" %}" data-src="{% static "assets/imgs/Street pictures for website-6.jpg" %}" alt="about"></div>
+                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/photo_2024-08-10_13-09-21.jpg" %}" data-src="{% static "assets/imgs/photo_2024-08-10_13-09-21.jpg" %}" alt="about"></div>
+
+                              
+                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/photo_2024-08-10_13-09-17.jpg" %}" data-src="{% static "assets/imgs/photo_2024-08-10_13-09-17.jpg" %}" alt="about"></div>
+
+                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/photo_2024-08-10_13-09-29.jpg" %}" data-src="{% static "assets/imgs/photo_2024-08-10_13-09-29.jpg" %}" alt="about"></div>
                             </div>
                           </div>
                     </div>
@@ -155,7 +158,7 @@
                         <div class="featured-card">
                             <a class="link-overlay" href="{{c.url}}"></a>
                             <div class="img-box">
-                                <img src="{{c.image.url}}" alt="Work">
+                                <img src="{{c.image.url}}" data-src="{{c.image.url}}" alt="Work">
                             </div>
                             <div class="content">
                                 <div class="left">
@@ -186,7 +189,7 @@
                         <div class="img-box">
                             <div class="img-box-inner">
                                 {% comment %} <img data-jarallax-element="-20 0" src="{% static 'assets/imgs/portfolio1-scaled.jpg' %}" alt="About"> {% endcomment %}
-                                <img data-jarallax-element="-20 0" src="{% static 'assets/imgs/photo_2024-08-10_13-09-29.jpg' %}" alt="about">
+                                <img data-jarallax-element="-20 0" src="{% static 'assets/imgs/photo_2024-08-10_13-09-29.jpg' %}" data-src="{% static 'assets/imgs/photo_2024-08-10_13-09-29.jpg' %}" alt="about">
                             </div>
                         </div>
                         <div class="about-bottom-content">
@@ -655,7 +658,7 @@
                     <div class="cta-content about-bottom-content-wrap">
                         <div class="img-box">
                             <div class="img-box-inner">
-                                <img data-jarallax-element="-20 0" src="{% static 'assets/imgs/photo_2024-08-10_13-09-00.jpg' %}" alt="About">
+                                <img data-jarallax-element="-20 0" src="{% static 'assets/imgs/photo_2024-08-10_13-09-00.jpg' %}" data-src="{% static 'assets/imgs/photo_2024-08-10_13-09-00.jpg' %}" alt="About">
                             </div>
                         </div>
                         <div class="about-bottom-content">

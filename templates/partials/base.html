@@ -212,10 +212,7 @@
                     </div>
                     <p>I'm a photographer who loves the entire process<br> of creating images. </p>
                     <div class="experience-popup-features">
-                        <h4>CONTACT ME <picture>
-                            <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b_1f3fb/512.webp" type="image/webp">
-                            <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b_1f3fb/512.gif" alt="👋" width="30" height="30">
-                          </picture></h4>
+                        <h4>CONTACT ME </h4>
                         <div class="experience-popup-feature-lists">
                             <div class="experience-popup-feature">
                              Contact me to discuss how we can collaborate together. I would love to hear from you! 
@@ -268,6 +265,36 @@
                 }
             });
         });
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = document.querySelectorAll("img");
+        
+            // Function to handle image loading errors
+            images.forEach(function (image) {
+                image.onerror = function () {
+                    image.dataset.failed = true;  // Mark the image as failed
+                };
+            });
+        
+            // Check if IntersectionObserver is supported
+            if ("IntersectionObserver" in window) {
+                let observer = new IntersectionObserver(function (entries, observer) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting && entry.target.dataset.failed) {
+                            // Reload the image if it previously failed to load
+                            let img = entry.target;
+                            img.src = img.dataset.src;  // Re-attempt loading
+                            img.dataset.failed = false; // Reset the failed status
+                        }
+                    });
+                });
+        
+                // Observe each image
+                images.forEach(function (image) {
+                    observer.observe(image);
+                });
+            }
+        });
+        
         
     </script>
     <script src="{% static 'assets/js/jquery.js' %}"></script>

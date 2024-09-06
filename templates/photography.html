@@ -70,7 +70,7 @@
                             <div class="photography-box">
                                 <div class="photography-box-inner">
                                     <a href="{{photo.url}}">
-                                    <img class="scaleDown" src="{{ photo.image.url }}" alt="photography">
+                                    <img class="scaleDown" src="{{ photo.image.url }}" data-src="{{ photo.image.url }}" alt="photography">
                                     </a>
                                 </div>
                             </div>
@@ -88,7 +88,7 @@
                     
                     .photography-grid {
                         display: grid;
-                        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust based on your design */
+                        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust based on your design */
                         gap: 10px; /* Spacing between images */
                     }
                     
