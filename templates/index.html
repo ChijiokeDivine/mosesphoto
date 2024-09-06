@@ -27,7 +27,7 @@
                             <!-- ===== Local Time ===== -->
                             <div class="header-local-time-box">
                                 <a href="/"><span>HOME/</span></a>
-                                <span id="realtime">00:00</span>
+                                <span translate="no" id="realtime">00:00</span>
                                 
                             </div>
 
@@ -65,7 +65,7 @@
                         </span>
 
                         <h1 id="movingElement">
-                            <span><span class="timeline-anim scroll-animation " data-animation="slide_down" style=" word-spacing: 10px;">MOSES CHIMEREZE</span>            <span><picture>
+                            <span><span class="timeline-anim scroll-animation "translate="no" data-animation="slide_down" style=" word-spacing: 10px;">MOSES CHIMEREZE</span>            <span><picture>
                                 <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/512.webp" type="image/webp">
                                 <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/512.gif" style="display: inline;" alt="👋" width="32" height="32">
                               </picture></span></span>
@@ -162,9 +162,9 @@
                                     <p class="title">{{c.name}}</p>
                                     <p class="subtitle">{{c.name|truncatewords:"1"}}</p>
                                 </div>
-                                <div class="right">
+                                {% comment %} <div class="right">
                                     <span class="date">2024</span>
-                                </div>
+                                </div> {% endcomment %}
                             </div>
                         </div>
                         {% endfor %}
@@ -179,7 +179,7 @@
                     <div class="section-header2">
                         <h3 class="title sticky-statement2 scroll-animation" data-animation="slide_and_scale">
                             <span class="transform-anim"><span class="timeline-anim scroll-animation" data-animation="slide_down">MORE ABOUT</span></span>
-                            <span class="transform-anim"><span class="timeline-anim scroll-animation" data-animation="slide_down">MOSES ©</span></span>
+                            <span class="transform-anim" translate="no"><span class="timeline-anim scroll-animation" data-animation="slide_down">MOSES ©</span></span>
                         </h3>
                     </div>
 
