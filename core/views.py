@@ -48,7 +48,7 @@ def category_list(request):
 def work_detail(request, slug):
     photo = Photo.objects.get(slug=slug)
     p_images = photo.p_media.all()
-    recommended_photos = Photo.objects.filter(category=photo.category).order_by("?")[:2]
+    recommended_photos = Photo.objects.filter(category=photo.category).exclude(id=photo.id).order_by("?")[:4]
     context = {
         'photo': photo,
         'p_images': p_images,

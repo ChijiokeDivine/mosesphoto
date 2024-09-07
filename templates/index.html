@@ -2,14 +2,7 @@
 {% load static %}
 {% block content %}
         <!-- ===== Popup Menu End ===== -->
-{% comment %} <style>
-    @media (max-width: 809px) {
-        .hero-sec {
-            height: 100vh;
-            gap: 0px;
-        }
-    }
-</style> {% endcomment %}
+{% comment %} {% endcomment %}
 
 
         <!-- ===== Smooth Scroll Start ===== -->
@@ -122,7 +115,6 @@
                             <div class="swiper-wrapper">
                               <div class="swiper-slide"> <img class="scaleDown" src="{% static "assets/imgs/KCEE final-14.jpg" %}" data-src="{% static "assets/imgs/KCEE final-14.jpg" %}" alt="about"></div>
                               <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/Street pictures for website.jpg" %}" data-src="{% static "assets/imgs/Street pictures for website.jpg" %}" alt="about"></div>
-                              <div class="swiper-slide"> <img class="scaleDown" src="{% static "assets/imgs/Spendy Finals-34.jpg" %}" data-src="{% static "assets/imgs/Spendy Finals-34.jpg" %}" alt="about"></div>
                               <div class="swiper-slide"> <img class="scaleDown"src="{% static "assets/imgs/KCEE final-16.jpg" %}" data-src="{% static "assets/imgs/KCEE final-16.jpg" %}" alt="about"></div>
                               <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/Street pictures for website-6.jpg" %}" data-src="{% static "assets/imgs/Street pictures for website-6.jpg" %}" alt="about"></div>
                               <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/photo_2024-08-10_13-09-21.jpg" %}" data-src="{% static "assets/imgs/photo_2024-08-10_13-09-21.jpg" %}" alt="about"></div>
@@ -156,7 +148,7 @@
                         {% for c in categories %}
                         <!-- Featured Cart -->
                         <div class="featured-card">
-                            <a class="link-overlay" href="{{c.url}}"></a>
+                            <a class="link-overlay" hx-boost="true" href="{{c.url}}"></a>
                             <div class="img-box">
                                 <img src="{{c.image.url}}" data-src="{{c.image.url}}" alt="Work">
                             </div>
@@ -680,13 +672,7 @@
                                             </path>
                                         </svg></a>
                                 </li>
-                                <li>
-                                    <a href="https://twitter.com/" target="_blank">Twitter <svg xmlns="http://www.w3.org/2000/svg"
-                                            focusable="false" viewBox="0 0 24 24" color="rgb(29, 29, 31)">
-                                            <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
-                                            </path>
-                                        </svg></a>
-                                </li>
+                               
                             </ul>
                         </div>
                     </div>
