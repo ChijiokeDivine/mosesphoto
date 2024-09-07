@@ -58,6 +58,15 @@
         #progress-bar1 {
             height: 3px;
           }
+
+        .gtranslate_wrapper{
+            padding-top: 13px;
+        }
+        .gt_switcher {
+            width: 120px !important;
+            
+        }
+       
     }
     @media (min-width: 809px) {
         #disp-img-none{
@@ -79,7 +88,9 @@
         height: 1.5px;
         transition: width 0.5s ease-in-out;
       }
-
+      .gt_switcher a{
+        background: #ecebeb !important;
+    }
       
 </style>
 
@@ -240,31 +251,6 @@
 
     <!-- ===== Scripts ===== -->
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const images = document.querySelectorAll("img");
-            document.querySelectorAll('img[data-gt-lazy-src]').forEach(function(img) {
-                img.setAttribute('src', img.getAttribute('data-gt-lazy-src'));
-                img.removeAttribute('data-gt-lazy-src');
-            });
-            images.forEach(image => {
-                // Check if the image has loaded correctly
-                if (!image.complete || image.naturalWidth === 0) {
-                    // If not, reload the image
-                    const src = image.src;
-                    image.src = "";  // Temporarily unset the src to force reload
-                    image.src = src;
-        
-                    // Optional: Log or handle the error
-                    console.log(`Image failed to load: ${src}. Retrying...`);
-        
-                    // Retry once if the image still fails after the first reload
-                    image.onerror = () => {
-                        console.log(`Retry failed for: ${src}`);
-                        // Implement additional logic here if needed, e.g., fallback image
-                    };
-                }
-            });
-        });
         document.addEventListener("DOMContentLoaded", function () {
             const images = document.querySelectorAll("img");
         
@@ -311,7 +297,6 @@
     <script src="{% static 'assets/js/jarallax-element.min.js' %}"></script>
     <script src="{% static 'assets/js/main.js' %}"></script>
     <script src="{% static 'assets/js/themescroll.js' %}"></script>
-    <script src="{% static 'assets/js/google-translate.js' %}"></script>
     <script src="{% static 'assets/js/swiper8-bundle.min.js' %}"></script>
 
     <script>window.gtranslateSettings = {"default_language":"en","languages":["en","de"],"wrapper_selector":".gtranslate_wrapper","flag_size":16,"switcher_horizontal_position":"inline"}</script>
