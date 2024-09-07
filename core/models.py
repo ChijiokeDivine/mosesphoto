@@ -23,12 +23,16 @@ class Category(models.Model):
     description = models.TextField(blank=True, null=True)
     image = CloudinaryField(folder="category-images")
     starts_from = models.DecimalField(max_digits=10, decimal_places=2, default="99")
-    slug = models.SlugField(unique=True)
+    slug = models.SlugField(unique=True, blank=True)
 
     def __str__(self):
         return self.name
     def url(self):
         return f"/category/{self.slug}"
+    def save(self, *args, **kwargs):
+        if not self.slug:  # Generate slug only if it hasn't been set
+            self.slug = slugify(self.name)
+        super(Category, self).save(*args, **kwargs)
     class Meta:
         verbose_name_plural = "Categories"
 
