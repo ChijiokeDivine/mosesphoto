@@ -10,7 +10,8 @@ from cloudinary.models import CloudinaryField
 import pytz
 from django.core.exceptions import ValidationError
 from django.utils.text import slugify
-
+import random
+import string
 
 cloudinary.config( 
   cloud_name = getattr(settings, 'CLOUD_NAME_SECRET', None), 
@@ -152,3 +153,18 @@ class PhotoshootSchedule(models.Model):
 
 
 
+class Review(models.Model):
+    name = models.CharField(max_length=60)
+    email = models.EmailField()
+    review = models.CharField(max_length=250)
+    date = models.DateTimeField(auto_now_add=True)
+    token = models.CharField(max_length=12, unique=True, blank=True)
+    verified = models.BooleanField(default=False)
+
+    class Meta:
+        verbose_name_plural = "Reviews"
+
+    def __str__(self):
+        return self.name
+
+        

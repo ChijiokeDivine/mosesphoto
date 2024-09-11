@@ -51,7 +51,7 @@
                 
 
                     <div class="hero-sec-content " id="hero-sec-content">
-                        <img src="{% static "assets/imgs/photo_2024-08-10_13-09-25.jpg" %}" data-src="{% static "assets/imgs/photo_2024-08-10_13-09-25.jpg" %}" id="disp-img-none" alt="MOSES" width="200" height="250">
+                        <img src="{% static "assets/imgs/photo_2024-08-10_13-09-25.jpg" %}" data-src="{% static '{% static ' %}"assets/imgs/photo_2024-08-10_13-09-25.jpg" %}" id="disp-img-none" alt="MOSES" width="200" height="250">
                         <span class="available-status">
                 
                               
@@ -88,7 +88,7 @@
                 <!-- ===== Full Image Start ===== -->
                 <div class="full-image-sec pt-30" >
                     <div class="full-image-box">
-                        <img class="scaleDown" src="{% static "assets/imgs/rsz_11photo_2024-08-10_13-09-04-transformed_1.jpg" %}" data-src="{% static "assets/imgs/rsz_11photo_2024-08-10_13-09-04-transformed_1.jpg" %}" alt="about">
+                        <img class="scaleDown" src="{% static "assets/imgs/rsz_11photo_2024-08-10_13-09-04-transformed_1.jpg" %}" data-src="{% static '{% static ' %}"assets/imgs/rsz_11photo_2024-08-10_13-09-04-transformed_1.jpg" %}" alt="about">
                         {% comment %} <img class="scaleDown" src="{% static 'assets/imgs/hero.jpg' %}" alt="about"> {% endcomment %}
                     </div>
                 </div>
@@ -113,16 +113,16 @@
                         </div>
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
-                              <div class="swiper-slide"> <img class="scaleDown" src="{% static "assets/imgs/KCEE final-14.jpg" %}" data-src="{% static "assets/imgs/KCEE final-14.jpg" %}" alt="about"></div>
-                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/Street pictures for website.jpg" %}" data-src="{% static "assets/imgs/Street pictures for website.jpg" %}" alt="about"></div>
-                              <div class="swiper-slide"> <img class="scaleDown"src="{% static "assets/imgs/KCEE final-16.jpg" %}" data-src="{% static "assets/imgs/KCEE final-16.jpg" %}" alt="about"></div>
-                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/Street pictures for website-6.jpg" %}" data-src="{% static "assets/imgs/Street pictures for website-6.jpg" %}" alt="about"></div>
-                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/photo_2024-08-10_13-09-21.jpg" %}" data-src="{% static "assets/imgs/photo_2024-08-10_13-09-21.jpg" %}" alt="about"></div>
+                              <div class="swiper-slide"> <img class="scaleDown" src="{% static "assets/imgs/KCEE final-14.jpg" %}" data-src="{% static '{% static ' %}"assets/imgs/KCEE final-14.jpg" %}" alt="about"></div>
+                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/Street pictures for website.jpg" %}" data-src="{% static '{% static ' %}"assets/imgs/Street pictures for website.jpg" %}" alt="about"></div>
+                              <div class="swiper-slide"> <img class="scaleDown"src="{% static "assets/imgs/KCEE final-16.jpg" %}" data-src="{% static '{% static ' %}"assets/imgs/KCEE final-16.jpg" %}" alt="about"></div>
+                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/Street pictures for website-6.jpg" %}" data-src="{% static '{% static ' %}"assets/imgs/Street pictures for website-6.jpg" %}" alt="about"></div>
+                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/photo_2024-08-10_13-09-21.jpg" %}" data-src="{% static '{% static ' %}"assets/imgs/photo_2024-08-10_13-09-21.jpg" %}" alt="about"></div>
 
                               
-                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/photo_2024-08-10_13-09-17.jpg" %}" data-src="{% static "assets/imgs/photo_2024-08-10_13-09-17.jpg" %}" alt="about"></div>
+                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/photo_2024-08-10_13-09-17.jpg" %}" data-src="{% static '{% static ' %}"assets/imgs/photo_2024-08-10_13-09-17.jpg" %}" alt="about"></div>
 
-                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/photo_2024-08-10_13-09-29.jpg" %}" data-src="{% static "assets/imgs/photo_2024-08-10_13-09-29.jpg" %}" alt="about"></div>
+                              <div class="swiper-slide"><img class="scaleDown" src="{% static "assets/imgs/photo_2024-08-10_13-09-29.jpg" %}" data-src="{% static '{% static ' %}"assets/imgs/photo_2024-08-10_13-09-29.jpg" %}" alt="about"></div>
                             </div>
                           </div>
                     </div>
@@ -150,7 +150,7 @@
                         <div class="featured-card">
                             <a class="link-overlay" hx-boost="true" href="{{c.url}}"></a>
                             <div class="img-box">
-                                <img src="{{c.image.url}}" data-src="{{c.image.url}}" alt="Work">
+                                <img src="{{c.image.url}}" data-src="{% static '{{c.image.url}}' %}" alt="Work">
                             </div>
                             <div class="content">
                                 <div class="left">
@@ -199,159 +199,6 @@
                 </section>
                 <!-- ===== About End ===== -->
 
-                <!-- ===== Partner Start ===== -->
-                {% comment %} <div class="partner-sec">
-                    <ul>
-                        <li>
-                            <a  class="partner-box">
-                                <div class="partner-box-inner">
-                                    <img src="{% static 'assets/imgs/partner-2.svg' %}" alt="Partner">
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="partner-box">
-                                <div class="partner-box-inner">
-                                    <img src="{% static 'assets/imgs/partner-2.svg' %}" alt="Partner">
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="partner-box">
-                                <div class="partner-box-inner">
-                                    <img src="{% static 'assets/imgs/partner-3.svg' %}" alt="Partner">
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="partner-box">
-                                <div class="partner-box-inner">
-                                    <img src="{% static 'assets/imgs/partner-4.svg' %}" alt="Partner">
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="partner-box">
-                                <div class="partner-box-inner">
-                                    <img src="{% static 'assets/imgs/partner-5.svg' %}" alt="Partner">
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="partner-box">
-                                <div class="partner-box-inner">
-                                    <img src="{% static 'assets/imgs/partner-6.svg' %}" alt="Partner">
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="partner-box">
-                                <div class="partner-box-inner">
-                                    <img src="{% static 'assets/imgs/partner-7.svg' %}" alt="Partner">
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="partner-box">
-                                <div class="partner-box-inner">
-                                    <img src="{% static 'assets/imgs/partner-1.svg' %}" alt="Partner">
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="partner-box">
-                                <div class="partner-box-inner">
-                                    <img src="{% static 'assets/imgs/partner-2.svg' %}" alt="Partner">
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="partner-box">
-                                <div class="partner-box-inner">
-                                    <img src="{% static 'assets/imgs/partner-3.svg' %}" alt="Partner">
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="partner-box">
-                                <div class="partner-box-inner">
-                                    <img src="{% static 'assets/imgs/partner-4.svg' %}" alt="Partner">
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="partner-box">
-                                <div class="partner-box-inner">
-                                    <img src="{% static 'assets/imgs/partner-5.svg' %}" alt="Partner">
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="partner-box">
-                                <div class="partner-box-inner">
-                                    <img src="{% static 'assets/imgs/partner-6.svg' %}" alt="Partner">
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="partner-box">
-                                <div class="partner-box-inner">
-                                    <img src="{% static 'assets/imgs/partner-7.svg' %}" alt="Partner">
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="partner-box">
-                                <div class="partner-box-inner">
-                                    <img src="{% static 'assets/imgs/partner-1.svg' %}" alt="Partner">
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="partner-box">
-                                <div class="partner-box-inner">
-                                    <img src="{% static 'assets/imgs/partner-1.svg' %}" alt="Partner">
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="partner-box">
-                                <div class="partner-box-inner">
-                                    <img src="{% static 'assets/imgs/partner-1.svg' %}" alt="Partner">
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="partner-box">
-                                <div class="partner-box-inner">
-                                    <img src="{% static 'assets/imgs/partner-1.svg' %}" alt="Partner">
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="partner-box">
-                                <div class="partner-box-inner">
-                                    <img src="{% static 'assets/imgs/partner-1.svg' %}" alt="Partner">
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="partner-box">
-                                <div class="partner-box-inner">
-                                    <img src="{% static 'assets/imgs/partner-1.svg' %}" alt="Partner">
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="partner-box">
-                                <div class="partner-box-inner">
-                                    <img src="{% static 'assets/imgs/partner-1.svg' %}" alt="Partner">
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div> {% endcomment %}
-                <!-- ===== Partner End ===== -->
 
 
                 <!-- ===== Experience Start ===== -->
@@ -504,16 +351,46 @@
                     </div>
                 </section>
                 <!-- ===== Motivation End ===== -->
+                <!-- ===== Testimonial Start ===== -->
+                 {% if reviews.count < 5 %}
+                 {% else %}
+                <section class="testimonial-sec">
+                    <div class="section-header3">
+                        <h3 class="title">
+                            <span>TESTIMONIALS</span>
+                           
+                        </h3>
+                    </div>
 
-                <!-- ===== Full Image Start ===== -->
-                <div class="video-sec">
-                    <video src="{% static 'assets/imgs/dark-mode/video-2.mp4' %}" loop="true" muted="true" autoplay playsinline=""></video>
-                </div> 
-                <!-- ===== Full Image End ===== -->
+                    <div class="testimonial-list-wrap">
+                        
+                        <ul class="testimonial-anim-boxes">
+                            {% for r in reviews %}
+                            <li class="testimonial-box">
+                                <div class="testimonial-header">
+
+                                    <div class="testimonial-author-box">
+                                        <div class="testimonial-author-content">
+                                            <h4>{{r.name}}</h4>
+                                           
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="testimonial-content">
+                                    <p>"{{r.review|truncatechars:"100"}}"</p>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+
+                        
+                    </div>
+                </section>
+                {% endif %}
 
 
-
-{% comment %} 
+                {% comment %} 
                 <!-- ===== Full Image Start ===== -->
                 <div class="full-image-sec">
                     <div class="full-image-box">
