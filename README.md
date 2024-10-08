@@ -4,7 +4,7 @@ Here's a README for your repository at `https://github.com/ChijiokeDivine/mosesp
 
 # MosesPhoto
 
-![MosesPhoto Logo](path/to/logo.png) <!-- Replace with your actual logo path -->
+
 
 ## Overview
 
